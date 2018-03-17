@@ -9,10 +9,9 @@ import java.util.Map;
 @RequestMapping("/test")
 public class TestController
 {
-    @RequestMapping("/audio")
-    public String testAudio(Map model)
+    @RequestMapping("/music")
+    public String testAudio()
     {
-        model.put("src","");
-        return "TestPage";
+        return "Test";
     }
 }
