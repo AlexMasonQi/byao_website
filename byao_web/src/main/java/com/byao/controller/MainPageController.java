@@ -11,4 +11,10 @@ public class MainPageController
     {
         return "index";
     }
+
+    @RequestMapping("/list")
+    public String listPage()
+    {
+        return "list";
+    }
 }
