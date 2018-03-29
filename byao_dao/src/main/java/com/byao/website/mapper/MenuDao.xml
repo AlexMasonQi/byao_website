@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.byao.website.dao.MenuDao">
+    <resultMap id="menuMap" type="com.byao.website.entity.Menu">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="menu_name" jdbcType="VARCHAR" property="menuName"/>
+        <result column="menu_url" jdbcType="VARCHAR" property="menuUrl"/>
+        <result column="level" jdbcType="INTEGER" property="level"/>
+        <result column="parent_id" jdbcType="INTEGER" property="parentId"/>
+        <result column="bshow" jdbcType="INTEGER" property="bshow"/>
+        <result column="second_parent_id" jdbcType="INTEGER" property="secondParentId"/>
+    </resultMap>
+
+    <!--查询所有一级菜单-->
+    <select id="selectAllFirstMenu" resultMap="menuMap">
+        select
+            id,
+            menu_name,
+            menu_url,
+            level,
+            parent_id,
+            bshow,
+            second_parent_id
+        from menu
+        where level = 1 and bshow = 1
+    </select>
+</mapper>

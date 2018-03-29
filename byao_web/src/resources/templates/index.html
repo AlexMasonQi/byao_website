@@ -4,12 +4,33 @@
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content=""> 
-<meta name="Author" content="">  
-<title>铂钥天下</title>
+	<meta name="description" content="">
+	<meta name="Author" content="">
+	<title>xxxxxx</title>
 
 	<head th:replace="common/common_css"></head>
 	<head th:replace="common/common_js"></head>
+
+	<script th:inline="javascript">
+        /*<![CDATA[*/
+        var contextPath = /*[[${#httpServletRequest.contextPath}]]*/'';
+
+        // $(function () {
+        //     $.ajax({
+        //                type: "post",
+        //                dataType: "json",
+        //                url: contextPath + "/menu/showFirstMenu",
+        //                success: function (data) {
+        //                    var str = "";
+        //                    $(data).each(function (index, content) {
+        //
+        //                    });
+        //                }
+        //            });
+        // })
+
+        /*]]>*/
+	</script>
 
 </head>
 
@@ -24,24 +45,24 @@
 		☰
 	</button>
 
-	 <a class="navbar-brand page-scroll" href="#slider">
+	<a class="navbar-brand page-scroll" th:href="@{/index}">
 	 	<img th:src="@{/logo.png}" />
-	 	铂钥天下
+		xxxxxx
 	 </a>
 	<div class="collapse navbar-toggleable-sm " id="collapsingNavbar">
 		<ul class="nav navbar-nav">
-			<li class="active">
+			<li class="active main-page">
 				<a th:href="@{/index}">主页</a>
 			</li>
 			<li class="dropdown">
 				<a th:href="@{/list}">公司概况</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">公司介绍</a></li>
-                  
-                  <li><a href="#">领导致辞</a></li>
-                  
-                  <li><a href="#">组织机构</a></li> 
-                </ul> 
+				<ul class="dropdown-menu">
+					<li><a href="#">公司介绍</a></li>
+
+					<li><a href="#">领导致辞</a></li>
+
+					<li><a href="#">组织机构</a></li>
+				</ul>
 			</li>
 		
 			<li class="dropdown">
@@ -481,8 +502,8 @@
 <script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
 <script th:src="@{/js/jquery.sliderPro.min.js}"></script>
 <script th:src="@{/js/owl.carousel.min.js}"></script>
-<script th:src="@{/contact/jqBootstrapValidation.js}"></script>
-<script th:src="@{/contact/contact_me.js}"></script>
+<!--<script th:src="@{/contact/jqBootstrapValidation.js}"></script>-->
+<!--<script th:src="@{/contact/contact_me.js}"></script>-->
 <script th:src="@{/js/custom.js}"></script>
 
 </body>

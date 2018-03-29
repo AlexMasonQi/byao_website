@@ -1,4 +1,4 @@
-package com.byao;
+package com.byao.website;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -22,6 +22,6 @@ public class ByaoApp extends SpringBootServletInitializer
 
     public static void main(String[] args)
     {
-        SpringApplication.run(ByaoApp.class, args);
+        SpringApplication.run(ByaoApp.class,args);
     }
 }

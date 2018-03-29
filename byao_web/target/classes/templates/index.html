@@ -4,12 +4,30 @@
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content=""> 
-<meta name="Author" content="">  
-<title>铂钥天下</title>
+	<meta name="description" content="">
+	<meta name="Author" content="">
+	<title>xxxxxx</title>
 
 	<head th:replace="common/common_css"></head>
 	<head th:replace="common/common_js"></head>
+
+	<script th:inline="javascript">
+        /*<![CDATA[*/
+        var contextPath = /*[[${#httpServletRequest.contextPath}]]*/'';
+
+        $(function () {
+            $.ajax({
+                       type: "post",
+                       dataType: "json",
+                       url: contextPath + "/menu/showFirstMenu",
+                       success: function (data) {
+                           console.log(data);
+                       }
+                   });
+        })
+
+        /*]]>*/
+	</script>
 
 </head>
 
@@ -26,7 +44,7 @@
 
 	 <a class="navbar-brand page-scroll" href="#slider">
 	 	<img th:src="@{/logo.png}" />
-	 	铂钥天下
+		 xxxxxx
 	 </a>
 	<div class="collapse navbar-toggleable-sm " id="collapsingNavbar">
 		<ul class="nav navbar-nav">
@@ -481,8 +499,8 @@
 <script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
 <script th:src="@{/js/jquery.sliderPro.min.js}"></script>
 <script th:src="@{/js/owl.carousel.min.js}"></script>
-<script th:src="@{/contact/jqBootstrapValidation.js}"></script>
-<script th:src="@{/contact/contact_me.js}"></script>
+<!--<script th:src="@{/contact/jqBootstrapValidation.js}"></script>-->
+<!--<script th:src="@{/contact/contact_me.js}"></script>-->
 <script th:src="@{/js/custom.js}"></script>
 
 </body>
