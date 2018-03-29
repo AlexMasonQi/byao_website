@@ -17,4 +17,14 @@ public class MenuQueryService
     {
         return menuDao.selectAllFirstMenu();
     }
+
+    public List<Menu> selectSecondMenu()
+    {
+        return menuDao.selectAllSecondMenu();
+    }
+
+    public List<Menu> selectThirdMenu()
+    {
+        return menuDao.selectAllThirdMenu();
+    }
 }

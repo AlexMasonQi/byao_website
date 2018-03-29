@@ -9,4 +9,8 @@ import java.util.List;
 public interface MenuDao
 {
     List<Menu> selectAllFirstMenu();
+
+    List<Menu> selectAllSecondMenu();
+
+    List<Menu> selectAllThirdMenu();
 }

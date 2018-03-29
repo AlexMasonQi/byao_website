@@ -25,4 +25,15 @@
         from menu
         where level = 1 and bshow = 1
     </select>
+
+    <!--查询所有二级菜单-->
+    <select id="selectAllSecondMenu" resultMap="menuMap">
+        select id,menu_name,menu_url,level,parent_id,second_parent_id from menu where level=2
+    </select>
+
+    <!--查询所有三级菜单-->
+    <select id="selectAllThirdMenu" resultMap="menuMap">
+        select id,menu_name,menu_url,level,parent_id,second_parent_id from menu where level=3
+    </select>
+
 </mapper>

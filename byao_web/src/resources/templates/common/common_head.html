@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+
+    var contextPath=/*[[${#httpServletRequest.contextPath]]*/'';
+    $(".company-info").mouseover(function()
+    {
+        $.ajax({
+            url:contextPath+"/menu/showSecondMenu",
+            type:post,
+            dataType:text,
+            data:{
+            },
+            success:function(data)
+            {
+                console.log(data);
+            }
+        });
+    });
+
+    /*]]>*/
+</script>
+
+<header>
+    <!-- Navigation Menu start-->
+
+    <nav id="topNav" class="navbar navbar-default main-menu" role="navigation">
+        <div class="container">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                ☰
+            </button>
+
+            <a class="navbar-brand page-scroll" href="#slider">
+                <img th:src="@{/logo.png}" />
+                铂钥天下
+            </a>
+            <div class="collapse navbar-toggleable-sm " id="collapsingNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a th:href="@{/index}">主页</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="company-info" th:href="@{/list}">公司概况</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">公司介绍</a></li>
+
+                            <li><a href="#">领导致辞</a></li>
+
+                            <li><a href="#">组织机构</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <!-- <a href="#about">新闻中心</a> -->
+                        <a href="#">新闻中心 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">公司新闻</a></li>
+                            <li><a href="#">特别关注</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <!-- <a href="#portfolio">主营业务</a> -->
+                        <a href="#">主营业务 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">影视</a></li>
+                            <li><a href="#">音乐</a></li>
+                            <li><a href="#">慈善</a></li>
+                            <li><a href="#">培训</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#team">投资者关系</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>

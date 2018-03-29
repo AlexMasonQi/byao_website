@@ -15,16 +15,19 @@
         /*<![CDATA[*/
         var contextPath = /*[[${#httpServletRequest.contextPath}]]*/'';
 
-        $(function () {
-            $.ajax({
-                       type: "post",
-                       dataType: "json",
-                       url: contextPath + "/menu/showFirstMenu",
-                       success: function (data) {
-                           console.log(data);
-                       }
-                   });
-        })
+        // $(function () {
+        //     $.ajax({
+        //                type: "post",
+        //                dataType: "json",
+        //                url: contextPath + "/menu/showFirstMenu",
+        //                success: function (data) {
+        //                    var str = "";
+        //                    $(data).each(function (index, content) {
+        //
+        //                    });
+        //                }
+        //            });
+        // })
 
         /*]]>*/
 	</script>
@@ -42,24 +45,24 @@
 		☰
 	</button>
 
-	 <a class="navbar-brand page-scroll" href="#slider">
+	<a class="navbar-brand page-scroll" th:href="@{/index}">
 	 	<img th:src="@{/logo.png}" />
-		 xxxxxx
+		xxxxxx
 	 </a>
 	<div class="collapse navbar-toggleable-sm " id="collapsingNavbar">
 		<ul class="nav navbar-nav">
-			<li class="active">
+			<li class="active main-page">
 				<a th:href="@{/index}">主页</a>
 			</li>
 			<li class="dropdown">
 				<a th:href="@{/list}">公司概况</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">公司介绍</a></li>
-                  
-                  <li><a href="#">领导致辞</a></li>
-                  
-                  <li><a href="#">组织机构</a></li> 
-                </ul> 
+				<ul class="dropdown-menu">
+					<li><a href="#">公司介绍</a></li>
+
+					<li><a href="#">领导致辞</a></li>
+
+					<li><a href="#">组织机构</a></li>
+				</ul>
 			</li>
 		
 			<li class="dropdown">
