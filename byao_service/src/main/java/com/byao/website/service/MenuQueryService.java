@@ -12,10 +12,7 @@ public class MenuQueryService
 {
     @Autowired
     private MenuDao menuDao;
-
-    @Autowired
-    private SemAccountDao semAccountDao;
-
+    
     public List<Menu> selectAllFirstMenu()
     {
         return menuDao.selectAllFirstMenu();

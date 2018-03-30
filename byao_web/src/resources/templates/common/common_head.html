@@ -34,13 +34,8 @@
                         <a th:text="${first.menuName}" href="#"></a>
                         <ul class="dropdown-menu" th:if="${first.bson==1}">
                             <li th:each="second:${secondMenuList}" th:if="${second.parentId==first.id}">
-                                <a th:text="${second.menuName}" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <a th:text="${second.menuName}" href="#">
                                 </a>
-                                <ul class="dropdown-menu-left" th:if="${second.bson==1}">
-                                    <li th:each="third:${thirdMenuList}" th:if="${third.parentId==second.id}">
-                                        <a th:text="${third.menuName}" href="#"></a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </li>
