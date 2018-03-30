@@ -1,399 +1,355 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="description" content="">
-	<meta name="Author" content="">
-	<title>xxxxxx</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="Author" content="">
+    <title>xxxxxx</title>
 
-	<head th:replace="common/common_css"></head>
-	<head th:replace="common/common_js"></head>
+    <head th:replace="common/common_css"></head>
+    <head th:replace="common/common_js"></head>
 
-	<script th:inline="javascript">
+    <script th:inline="javascript">
         /*<![CDATA[*/
         var contextPath = /*[[${#httpServletRequest.contextPath}]]*/'';
 
-        // $(function () {
-        //     $.ajax({
-        //                type: "post",
-        //                dataType: "json",
-        //                url: contextPath + "/menu/showFirstMenu",
-        //                success: function (data) {
-        //                    var str = "";
-        //                    $(data).each(function (index, content) {
-        //
-        //                    });
-        //                }
-        //            });
-        // })
 
         /*]]>*/
-	</script>
+    </script>
 
 </head>
 
 <body>
 <!-- Header End -->
-<header>
-	<!-- Navigation Menu start-->
-	
-<nav id="topNav" class="navbar navbar-default main-menu" role="navigation">
-<div class="container">
-	<button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-		☰
-	</button>
-
-	<a class="navbar-brand page-scroll" th:href="@{/index}">
-	 	<img th:src="@{/logo.png}" />
-		xxxxxx
-	 </a>
-	<div class="collapse navbar-toggleable-sm " id="collapsingNavbar">
-		<ul class="nav navbar-nav">
-			<li class="active main-page">
-				<a th:href="@{/index}">主页</a>
-			</li>
-			<li class="dropdown">
-				<a th:href="@{/list}">公司概况</a>
-				<ul class="dropdown-menu">
-					<li><a href="#">公司介绍</a></li>
-
-					<li><a href="#">领导致辞</a></li>
-
-					<li><a href="#">组织机构</a></li>
-				</ul>
-			</li>
-		
-			<li class="dropdown">
-				<!-- <a href="#about">新闻中心</a> -->
-				<a href="#">新闻中心 <b class="caret"></b></a>   
-                <ul class="dropdown-menu">
-                  <li><a href="#">公司新闻</a></li>
-                  <li><a href="#">特别关注</a></li>
-                </ul>  
-			</li>
-			 
-			<li class="dropdown">
-				<!-- <a href="#portfolio">主营业务</a> -->
-				<a href="#">主营业务 <b class="caret"></b></a>   
-                <ul class="dropdown-menu">
-                  <li><a href="#">影视</a></li>
-                  <li><a href="#">音乐</a></li>
-                  <li><a href="#">慈善</a></li>
-                  <li><a href="#">培训</a></li>
-                </ul>  
-			</li>
-			<li>
-				<a href="#team">投资者关系</a>
-			</li>
-		</ul>
-
-	</div>
-</div>
-</nav>
-</header>
+<header th:replace="common/common_head"></header>
 <!-- Header End -->
 
 
 <section class="slider-pro slider" id="slider">
-	<div class="sp-slides">
+    <div class="sp-slides">
 
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-			<div class="img-overlay"></div>
+        <!-- Slides -->
+        <div class="sp-slide main-slides">
+            <div class="img-overlay"></div>
 
-			<img class="sp-image" th:src="@{/images/slider/slider-img-1.jpg}" alt="Slider 1"/>
+            <img class="sp-image" th:src="@{/images/slider/slider-img-1.jpg}" alt="Slider 1"/>
 
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">简介</span>
-			</h1>
+            <h1 class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500"
+                data-hide-delay="200">
+                <span class="highlight-texts">简介</span>
+            </h1>
 
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				详细介绍
-			</p>
-		</div>
-		<!-- Slides End -->
+            <p class="sp-layer"
+               data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200"
+               data-show-transition="left" data-hide-transition="right">
+                详细介绍
+            </p>
+        </div>
+        <!-- Slides End -->
 
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-		<div class="img-overlay"></div>
-			<img class="sp-image" th:src="@{/images/slider/slider-img-2.jpg}" alt="Slider 2"/>
+        <!-- Slides -->
+        <div class="sp-slide main-slides">
+            <div class="img-overlay"></div>
+            <img class="sp-image" th:src="@{/images/slider/slider-img-2.jpg}" alt="Slider 2"/>
 
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">这是简介</span>
-			</h1>
+            <h1 class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500"
+                data-hide-delay="200">
+                <span class="highlight-texts">这是简介</span>
+            </h1>
 
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				这里详细介绍
-			</p>
-		</div>
-		<!-- Slides End -->
+            <p class="sp-layer"
+               data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200"
+               data-show-transition="left" data-hide-transition="right">
+                这里详细介绍
+            </p>
+        </div>
+        <!-- Slides End -->
 
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-			<div class="img-overlay"></div>
+        <!-- Slides -->
+        <div class="sp-slide main-slides">
+            <div class="img-overlay"></div>
 
-			<img class="sp-image" th:src="@{/images/slider/slider-img-3.jpg}" alt="Slider 3"/>
+            <img class="sp-image" th:src="@{/images/slider/slider-img-3.jpg}" alt="Slider 3"/>
 
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">简介</span>
-			</h1>
+            <h1 class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500"
+                data-hide-delay="200">
+                <span class="highlight-texts">简介</span>
+            </h1>
 
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				详细介绍
-			</p>
-		</div>
-		<!-- Slides End -->
+            <p class="sp-layer"
+               data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200"
+               data-show-transition="left" data-hide-transition="right">
+                详细介绍
+            </p>
+        </div>
+        <!-- Slides End -->
 
-	</div>
+    </div>
 </section>
 
-<!-- Main Slider End -->  
+<!-- Main Slider End -->
 
-	
+
 <section id="services" class="section-wrapper">
-	<div class="container">
-		<div class="row"> 
-			<!-- Section Header -->
-			<div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-				<h2><span class="highlight-text">公司概况</span></h2> 
-				<p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！</p>
-			</div>
-			<!-- Section Header End -->
+    <div class="container">
+        <div class="row">
+            <!-- Section Header -->
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                <h2><span class="highlight-text">公司概况</span></h2>
+                <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
+                    这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！这里写公司大概信息！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！或者不写！</p>
+            </div>
+            <!-- Section Header End -->
 
-			<div class="our-services">
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-						<div class="service-box">
-							<div class="icon">
-								<a href=""><i class=" icon_adjust-horiz "></i> <h3>公司介绍</h3></a>
-							</div> 
-							<p>概况，后台可取公司介绍里的前几个字符串就行</p>
-						</div> 
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-						<div class="service-box">
-							<div class="icon">
-								<a href=""><i class=" icon_documents_alt"></i><h3>领导致辞</h3></a>
-							</div>
-							
-							<p>概况，取领导致辞里前几个字符串就可以</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-						<div class="service-box">
-							<div class="icon">
-								<a href=""><i class="icon_flowchart"></i><h3>组织机构</h3></a>
-							</div>
-							
-							<p>同样取前几个字符串可以</p>
-						</div>
-					</div>
-				 
-				</div> 
-			</div> 
+            <div class="our-services">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
+                        <div class="service-box">
+                            <div class="icon">
+                                <a href=""><i class=" icon_adjust-horiz "></i>
+                                    <h3>公司介绍</h3></a>
+                            </div>
+                            <p>概况，后台可取公司介绍里的前几个字符串就行</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
+                        <div class="service-box">
+                            <div class="icon">
+                                <a href=""><i class=" icon_documents_alt"></i>
+                                    <h3>领导致辞</h3></a>
+                            </div>
 
-		</div>
-	</div>
-</section> 
+                            <p>概况，取领导致辞里前几个字符串就可以</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
+                        <div class="service-box">
+                            <div class="icon">
+                                <a href=""><i class="icon_flowchart"></i>
+                                    <h3>组织机构</h3></a>
+                            </div>
+
+                            <p>同样取前几个字符串可以</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <section id="about" class="about-sec section-wrapper description">
-	<div class="container">
-		<div class="row">
-			<!-- Section Header -->
-			<div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-				<h2><span class="highlight-text">新闻中心</span></h2>
-			   
-				<p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">然后到这里就不行了，所以我认为应该给这个简介添加一个独立的数据</p>
-			</div>
-			<!-- Section Header End -->
+    <div class="container">
+        <div class="row">
+            <!-- Section Header -->
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                <h2><span class="highlight-text">新闻中心</span></h2>
 
-			<div class="col-md-6 col-sm-6 col-xs-12 custom-sec-img wow fadeInDown">
-				<img th:src="@{/images/features.png}" alt="Custom Image">
-			</div>
+                <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
+                    然后到这里就不行了，所以我认为应该给这个简介添加一个独立的数据</p>
+            </div>
+            <!-- Section Header End -->
 
-			<div class="col-md-6 col-sm-6 col-xs-12 customized-text wow fadeInDown black-ed">
-			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum ipsum.  lobcaecati ea maiores totam nostrum, ad iure rerum quas harum ipsum. Rem ea ducimus quos quae quo.</p> -->
-				<div class="row"> 
-					<div class="col-md-11">
-						<strong>标题</strong>
-						<p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
-					</div>
-				</div>
-				<div class="row"> 
-					<div class="col-md-11">
-						<strong>标题</strong>
-						<p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
-					</div>
-				</div>
-				<div class="row"> 
-					<div class="col-md-11">
-						<strong>标题</strong>
-						<p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
-					</div>
-				</div>
-			</div>
-		</div> 
-	</div>
-</section> 
+            <div class="col-md-6 col-sm-6 col-xs-12 custom-sec-img wow fadeInDown">
+                <img th:src="@{/images/features.png}" alt="Custom Image">
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12 customized-text wow fadeInDown black-ed">
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum ipsum.  lobcaecati ea maiores totam nostrum, ad iure rerum quas harum ipsum. Rem ea ducimus quos quae quo.</p> -->
+                <div class="row">
+                    <div class="col-md-11">
+                        <strong>标题</strong>
+                        <p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11">
+                        <strong>标题</strong>
+                        <p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11">
+                        <strong>标题</strong>
+                        <p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="portfolio" class="bgSection portfolio-section">
-	<div class="container">
-		<div class="row">
+    <div class="container">
+        <div class="row">
 
-			<!-- Section Header -->
-			<div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-				<h2><span class="highlight-text">主营业务</span></h2>
-			   
-				<p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">这个也是</p>
-			</div>
-			<!-- Section Header End -->
+            <!-- Section Header -->
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                <h2><span class="highlight-text">主营业务</span></h2>
 
-		</div>
-	</div>
+                <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">这个也是</p>
+            </div>
+            <!-- Section Header End -->
 
-	<!-- Works -->
-	<div class="portfolio-works wow fadeIn" data-wow-duration="2s">
+        </div>
+    </div>
 
-		<!-- Filter Button Start -->
-		<div id="portfolio-filter" class="portfolio-filter-btn-group">
-			<ul>
-				<li>
-					
-					<a href="#" data-filter=".web">影视</a>
-					<a href="#" data-filter=".seo">音乐</a>
-					<a href="#" data-filter=".works">慈善</a>
-					<a href="#" data-filter=".brands">培训</a>
-				</li>
-			</ul>
-		</div>
-		<!-- Filter Button End -->
+    <!-- Works -->
+    <div class="portfolio-works wow fadeIn" data-wow-duration="2s">
 
-		<div class="portfolio-items">
-			<!-- 对接时请注意，这里一共有四个分类：影视音乐慈善培训，每一块都对应了两项，不一定要两项，这个我希望后台对接时，可以由用户自己定义显示的数量，四个分类主要区别在于下边一行div的class最后一个类名 -->
+        <!-- Filter Button Start -->
+        <div id="portfolio-filter" class="portfolio-filter-btn-group">
+            <ul>
+                <li>
 
-			<!-- 这是影视类class中最后一个类是web-->
-			<div class="item portfolio-item web">
-				<img th:src="@{/images/img-portfolio/portfolio1.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio1.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a>
-								</li>
+                    <a href="#" data-filter=".web">影视</a>
+                    <a href="#" data-filter=".seo">音乐</a>
+                    <a href="#" data-filter=".works">慈善</a>
+                    <a href="#" data-filter=".brands">培训</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Filter Button End -->
 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item portfolio-item web">
-				<img th:src="@{/images/img-portfolio/portfolio1.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio1.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a>
-								</li>
+        <div class="portfolio-items">
+            <!-- 对接时请注意，这里一共有四个分类：影视音乐慈善培训，每一块都对应了两项，不一定要两项，这个我希望后台对接时，可以由用户自己定义显示的数量，四个分类主要区别在于下边一行div的class最后一个类名 -->
 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- 影视类结束-->
+            <!-- 这是影视类class中最后一个类是web-->
+            <div class="item portfolio-item web">
+                <img th:src="@{/images/img-portfolio/portfolio1.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio1.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
 
-			<!--这是音乐类class中最后一个类是seo-->
-			<div class="item portfolio-item seo">
-				<img th:src="@{/images/img-portfolio/portfolio3.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio3.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item portfolio-item seo">
-				<img th:src="@{/images/img-portfolio/portfolio3.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio3.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--音乐类结束-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item portfolio-item web">
+                <img th:src="@{/images/img-portfolio/portfolio1.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio1.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
 
-			<!--这是慈善类，class中最后一个类名是works-->
-			<div class="item portfolio-item works">
-				<img th:src="@{/images/img-portfolio/portfolio4.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio5.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item portfolio-item works">
-				<img th:src="@{/images/img-portfolio/portfolio4.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio5.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 影视类结束-->
 
-			<!--慈善结束-->
+            <!--这是音乐类class中最后一个类是seo-->
+            <div class="item portfolio-item seo">
+                <img th:src="@{/images/img-portfolio/portfolio3.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio3.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item portfolio-item seo">
+                <img th:src="@{/images/img-portfolio/portfolio3.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio3.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--音乐类结束-->
 
-			<!--这是培训，class中最后一个类名是brands-->
-			<div class="item portfolio-item brands">
-			   <img th:src="@{/images/img-portfolio/portfolio5.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio7.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item portfolio-item brands">
-			   <img th:src="@{/images/img-portfolio/portfolio5.jpg}" alt="">
-				<div class="portfolio-details-wrapper">
-					<div class="portfolio-details">
-						<div class="portfolio-meta-btn">
-							<ul class="work-meta">
-								<li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio7.jpg}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--培训结束-->
+            <!--这是慈善类，class中最后一个类名是works-->
+            <div class="item portfolio-item works">
+                <img th:src="@{/images/img-portfolio/portfolio4.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio5.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item portfolio-item works">
+                <img th:src="@{/images/img-portfolio/portfolio4.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio5.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		</div>
-	</div>
+            <!--慈善结束-->
+
+            <!--这是培训，class中最后一个类名是brands-->
+            <div class="item portfolio-item brands">
+                <img th:src="@{/images/img-portfolio/portfolio5.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio7.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item portfolio-item brands">
+                <img th:src="@{/images/img-portfolio/portfolio5.jpg}" alt="">
+                <div class="portfolio-details-wrapper">
+                    <div class="portfolio-details">
+                        <div class="portfolio-meta-btn">
+                            <ul class="work-meta">
+                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio7.jpg}"
+                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--培训结束-->
+
+        </div>
+    </div>
 </section>
 <!-- Portfolio Section End -->
 
@@ -449,38 +405,38 @@
 
 
 <footer>
-	<div class="foo">
-		<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-4">
-				<table>
-					<tr>
-						<td><span class="glyphicon glyphicon-home"></span>公司地址：</td>
-						<td>北京市朝阳区五里桥二街草房像素南区9号楼0216室</td>
-					</tr>
-					<tr>
-						<td>联系电话：</td>
-						<td>123456789101</td>
-					</tr>
-					<tr>
-						<td>联系邮箱：</td>
-						<td>123456789@ceshi。com</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-1">
-				<img th:src="@{/logo.png}">
-			</div>
-			
-		</div>
-		<div style="clear: both;"></div>
-		<p>
-			CopyRight©2018.03 All Rights Reserved. 铂钥天下文化传媒有限责任公司版权所有
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="http://www.beianbeian.com/">吉ICP备16008330号-1</a>
-		</p>
-			
-	</div>
+    <div class="foo">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-4">
+                <table>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-home"></span>公司地址：</td>
+                        <td>北京市朝阳区五里桥二街草房像素南区9号楼0216室</td>
+                    </tr>
+                    <tr>
+                        <td>联系电话：</td>
+                        <td>123456789101</td>
+                    </tr>
+                    <tr>
+                        <td>联系邮箱：</td>
+                        <td>123456789@ceshi。com</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-1">
+                <img th:src="@{/logo.png}">
+            </div>
+
+        </div>
+        <div style="clear: both;"></div>
+        <p>
+            CopyRight©2018.03 All Rights Reserved. 铂钥天下文化传媒有限责任公司版权所有
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.beianbeian.com/">吉ICP备16008330号-1</a>
+        </p>
+
+    </div>
 </footer>
 
 <!-- Footer End -->

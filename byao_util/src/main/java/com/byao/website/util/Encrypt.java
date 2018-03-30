@@ -1,8 +1,11 @@
 package com.byao.website.util;
 
+import org.apache.commons.codec.binary.Base64;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -88,6 +91,42 @@ public class Encrypt
         }
         return sb.toString();
     }
+
+    /**
+     * @param plainText 要加密的字符串
+     * @return 加密后的密文
+     * @description Base64加密字符串
+     * @author Xu Shiqi
+     * @date 2018.03.30 15:17
+     */
+    public static String base64Encode(String plainText) throws UnsupportedEncodingException
+    {
+        byte[] plainBytes = plainText.getBytes("utf-8");
+        Base64 base64 = new Base64();
+
+        byte[] encryptBytes = base64.encode(plainBytes);
+
+        return new String(encryptBytes);
+    }
+
+    /**
+     * @param encryptText 要解密的密文
+     * @return 解密后的原字符串
+     * @description Base64解密密文
+     * @author Xu Shiqi
+     * @date 2018.03.30 15:24
+     */
+    public static String base64Decode(String encryptText)
+    {
+        byte[] encryptBytes = encryptText.getBytes();
+
+        Base64 base64 = new Base64();
+
+        byte[] plainBytes = base64.decode(encryptBytes);
+
+        return new String(plainBytes);
+    }
+
 
     public static void main(String[] args)
     {

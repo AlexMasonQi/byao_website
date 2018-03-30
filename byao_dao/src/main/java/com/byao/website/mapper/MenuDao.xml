@@ -9,6 +9,7 @@
         <result column="level" jdbcType="INTEGER" property="level"/>
         <result column="parent_id" jdbcType="INTEGER" property="parentId"/>
         <result column="bshow" jdbcType="INTEGER" property="bshow"/>
+        <result column="bson" jdbcType="INTEGER" property="bson"/>
         <result column="second_parent_id" jdbcType="INTEGER" property="secondParentId"/>
     </resultMap>
 
@@ -20,7 +21,7 @@
             menu_url,
             level,
             parent_id,
-            bshow,
+            bson,
             second_parent_id
         from menu
         where level = 1 and bshow = 1
@@ -28,12 +29,30 @@
 
     <!--查询所有二级菜单-->
     <select id="selectAllSecondMenu" resultMap="menuMap">
-        select id,menu_name,menu_url,level,parent_id,second_parent_id from menu where level=2
+        select
+            id,
+            menu_name,
+            menu_url,
+            level,
+            parent_id,
+            bson,
+            second_parent_id
+        from menu
+        where level = 2
     </select>
 
     <!--查询所有三级菜单-->
     <select id="selectAllThirdMenu" resultMap="menuMap">
-        select id,menu_name,menu_url,level,parent_id,second_parent_id from menu where level=3
+        select
+            id,
+            menu_name,
+            menu_url,
+            level,
+            parent_id,
+            bson,
+            second_parent_id
+        from menu
+        where level = 3
     </select>
 
 </mapper>

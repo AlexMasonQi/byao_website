@@ -11,10 +11,11 @@ public class Menu implements Serializable
     private Integer level;
     private Integer parentId;
     private Integer bshow;
+    private Integer bson;
     private Integer secondParentId;
     private List<Menu> menus;
 
-    public Menu(Integer id, String menuName, String menuUrl, Integer level, Integer parentId, Integer bshow, Integer secondParentId, List<Menu> menus)
+    public Menu(Integer id, String menuName, String menuUrl, Integer level, Integer parentId, Integer bshow, Integer bson, Integer secondParentId, List<Menu> menus)
     {
         this.id = id;
         this.menuName = menuName;
@@ -22,6 +23,7 @@ public class Menu implements Serializable
         this.level = level;
         this.parentId = parentId;
         this.bshow = bshow;
+        this.bson = bson;
         this.secondParentId = secondParentId;
         this.menus = menus;
     }
@@ -88,6 +90,16 @@ public class Menu implements Serializable
     public void setBshow(Integer bshow)
     {
         this.bshow = bshow;
+    }
+
+    public Integer getBson()
+    {
+        return bson;
+    }
+
+    public void setBson(Integer bson)
+    {
+        this.bson = bson;
     }
 
     public Integer getSecondParentId()

@@ -22,6 +22,10 @@ public class MainPageController
         model.put("firstMenuList", firstMenuList);
 
         List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
+        model.put("secondMenuList", secondMenuList);
+
+        List<Menu> thirdMenuList = menuQueryService.selectThirdMenu();
+        model.put("thirdMenuList", thirdMenuList);
 
         return "index";
     }
