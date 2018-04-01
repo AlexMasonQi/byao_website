@@ -31,7 +31,7 @@
                         <a th:href="@{/index}">主页</a>
                     </li>
                     <li class="dropdown" th:each="first:${firstMenuList}">
-                        <a th:text="${first.menuName}" href="#"></a>
+                        <a th:text="${first.menuName}" th:href="${first.menuUrl}"></a>
                         <ul class="dropdown-menu" th:if="${first.bson==1}">
                             <li th:each="second:${secondMenuList}" th:if="${second.parentId==first.id}">
                                 <a th:text="${second.menuName}" href="#">

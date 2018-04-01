@@ -31,8 +31,38 @@ public class MainPageController
     }
 
     @RequestMapping("/list")
-    public String listPage()
+    public String listPage(Map model)
     {
+        List<Menu> firstMenuList = menuQueryService.selectAllFirstMenu();
+        model.put("firstMenuList", firstMenuList);
+
+        List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
+        model.put("secondMenuList", secondMenuList);
+
         return "list";
+    }
+
+    @RequestMapping("/container")
+    public String containerPage(Map model)
+    {
+        List<Menu> firstMenuList = menuQueryService.selectAllFirstMenu();
+        model.put("firstMenuList", firstMenuList);
+
+        List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
+        model.put("secondMenuList", secondMenuList);
+
+        return "container";
+    }
+
+    @RequestMapping("/media")
+    public String mediaPage(Map model)
+    {
+        List<Menu> firstMenuList = menuQueryService.selectAllFirstMenu();
+        model.put("firstMenuList", firstMenuList);
+
+        List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
+        model.put("secondMenuList", secondMenuList);
+
+        return "media";
     }
 }
