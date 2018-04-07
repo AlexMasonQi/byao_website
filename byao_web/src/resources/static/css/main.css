@@ -80,121 +80,121 @@
 	height: 100%;
 	allowfullscreen:"true"
 }
-.mainContainer .music{
-	width: 30%;
-	border: 1px solid red;
-	float: left;
-}
-.music ul, .music li{
-	padding: 0;
-	margin: 0;
-}
-.music table{
-	width: 100%;
-}
-.music table td,.music table th{
-	padding: 5px;
-}
-.music table tr td:nth-child(1){
-	width: 70%;
-}
-.music table tr td:nth-child(2){
-	width: 15%;
-}
-.music table tr td:nth-child(3){
-	width: 15%;
-}
-.music table tr{
-	border-bottom: 1px solid grey;
-}
-.music table tr:hover{
-	background-color: grey;
-	cursor: pointer;
-}
-.mainContainer .lyrics{
-	width: 70%;
-	float: left;
+
+.music {
+	background-image: url(../images/slider/slider-img-1.jpg);
+	background-repeat: no-repeat;
 	height: 500px;
-	float: left; 	
-	position:relative;
-	background-image: url(../images/slider/slider-img-3.jpg);
+	background-size: 100%;
+	color: black;
 }
-/* .lrc-img{
-	width: 100%;
-	height: 500px;
-	float: left; 	
-	position:relative;
-	background-image: url(../images/slider/slider-img-3.jpg);
-	opacity: 0.5;
-}  */
-.lrcs{
- 	position: absolute;
-	color: red;
-	width: 100%;
-	height: 500px;
-	text-align: center;
+
+.music .row:nth-child(1) {
+	height: 90%;
 	overflow: hidden;
 }
-.lrcs ul li{
 
+.music .row:nth-child(2) {
+	height: 10%;
+	background-color: rgba(255, 255, 255, 0.4);
+	color: white;
 }
-.mainContainer .control{
-	width: 100%;
-	background-color: grey;
-	height: 50px;
+
+.music .row:nth-child(2) div {
+	height: 100%;
+	text-align: center;
 	line-height: 50px;
 }
-.controler .btns,.controler .bars{
-	float: left;
+
+#timeCss, #voiceCss {
+	height: 5px;
+	margin-top: 20px;
+}
+
+.music-list {
+	height: 100%;
+
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 0px;
+}
+
+.bootstraPanel {
+	height: 100%;
+}
+
+.test {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
 	cursor: pointer;
 }
-.controler .btns{
-	width: 30%;
-/* 	background-color: green; */
+
+.test table {
+	margin-bottom: 46px;
 }
-.btns span{
-	width: 33%;
+
+.taggerTitle {
+	background-color: #9f9f9f00;
+	width: 100%;
+	height: 46px;
+	font-size: 17px;
+	line-height: 46px;
+	padding-left: 10px;
+}
+
+.checkBox {
+	float: right;
+	font-size: 20px;
+	padding-right: 15px;
+	cursor: pointer;
+}
+
+.clickmusic td:nth-child(1) {
+	display: none;
+}
+
+.lrcPanel ul li {
+	list-style: none;
 	text-align: center;
-	display: block;
-	float: left;
+	line-height: 25px;
 }
-.controler .bars{
-	width: 70%;
-/* 	background-color: blue; */
+
+.icon_menu {
+	position: absolute;
+	display: none;
+	font-size: 30px;
+	color: red;
+	z-index: 5;
+	cursor: pointer;
 }
-.bars .now-time,.bars .bAr,.bar .end-time,.bars .voices{
-	float: left;
-}
-.bAr{
-	width:60%;
-	background-color: white;
-	border: 1px solid black;
-	border-radius: 5px;
-	height: 5;
-	line-height: 50px;
-	margin-top: 15px;
-}
-.bar-color{
-	width: 0%;
-	background-color: yellow;
+
+.progress {
+	background-color: #0606064d;
+	border-radius: 10px;
 	height: 5px;
-	border-radius: 5px;
-	line-height: 50px;
+	cursor: pointer;
+}
+
+.progressBar {
+	background-color: #fff;
+	width: 50%;
+	height: 100%;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.pre, .stop, .next, .voice {
+	cursor: pointer;
+	font-size: 25px;
 }
 
 .media-Container{
 	width: 100%;
 	padding: 5px;
 }
-.row{
-	margin-top: 10px;
-}
-.row div a:hover{
-	color: red;
-}
-.row h4{
-	color:black;
-}
+
 .Page{
 	text-align: center;
 }
@@ -207,13 +207,13 @@
 .fold_wrap li{
 	display:inline;  
 	float:left;
-	height:260px;
+	height: 260px;
 	position:relative;
 	overflow:hidden;
 	cursor:pointer;
 	}
 .fold_wrap li .mask_b{
-	position:absolute;
+	position: absolute;
 	overflow:hidden;
 	width:100%;
 	height:100%;

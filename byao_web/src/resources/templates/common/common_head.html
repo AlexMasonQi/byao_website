@@ -3,10 +3,31 @@
       xmlns:th="http://www.thymeleaf.org">
 <html>
 
+<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+
 <script type="text/javascript" th:inline="javascript">
     /*<![CDATA[*/
 
     var contextPath = /*[[${#httpServletRequest.contextPath}]]*/'';
+    var secondMenu = /*[[${secondMenuList}]]*/'';
+
+    // function secondCont(firstId) {
+    //     $(secondMenu).each(function (index, value) {
+    //         if (value.parentId == firstId) {
+    //             window.location.href = contextPath + "/companyInfo?id=" + value.id;
+    //             return false;
+    //         }
+    //     });
+    // }
+
+    $(function () {
+        $(".dropdown-menu").each(function () {
+            //取出ul下的第一个li
+            var li = $(this).children().first().children().first().attr("href");
+            $(this).prev().attr("href", li);
+        });
+
+    });
 
     /*]]>*/
 </script>
@@ -23,7 +44,7 @@
 
             <a class="navbar-brand page-scroll" th:href="@{/index}">
                 <img th:src="@{/logo.png}"/>
-                xxxxxx
+                铂钥天下
             </a>
             <div class="collapse navbar-toggleable-sm " id="collapsingNavbar">
                 <ul class="nav navbar-nav">
@@ -31,42 +52,82 @@
                         <a th:href="@{/index}">主页</a>
                     </li>
                     <li class="dropdown" th:each="first:${firstMenuList}">
-                        <a th:text="${first.menuName}" th:href="${first.menuUrl}"></a>
+                        <a th:text="${first.menuName}" class="first-menu" href="javascript:void(0)"></a>
                         <ul class="dropdown-menu" th:if="${first.bson==1}">
                             <li th:each="second:${secondMenuList}" th:if="${second.parentId==first.id}">
-                                <a th:text="${second.menuName}" href="#">
+                                <a th:text="${second.menuName}" class="second-menu"
+                                   th:href="${first.menuUrl}+'?id='+${second.id}">
                                 </a>
                             </li>
                         </ul>
                     </li>
-
-                    <!--<li class="dropdown">-->
-                    <!--<a href="#about">新闻中心</a> -->
-                    <!--<a href="#">新闻中心 <b class="caret"></b></a>-->
-                    <!--<ul class="dropdown-menu">-->
-                    <!--<li><a href="#">公司新闻</a></li>-->
-                    <!--<li><a href="#">特别关注</a></li>-->
-                    <!--</ul>-->
-                    <!--</li>-->
-
-                    <!--<li class="dropdown">-->
-                    <!--<a href="#portfolio">主营业务</a> -->
-                    <!--<a href="#">主营业务 <b class="caret"></b></a>-->
-                    <!--<ul class="dropdown-menu">-->
-                    <!--<li><a href="#">影视</a></li>-->
-                    <!--<li><a href="#">音乐</a></li>-->
-                    <!--<li><a href="#">慈善</a></li>-->
-                    <!--<li><a href="#">培训</a></li>-->
-                    <!--</ul>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<a href="#team">投资者关系</a>-->
-                    <!--</li>-->
                 </ul>
-                <!--<div class="nav navbar-nav" style="padding-left:15px;">-->
-                <!--<a th:href="@{/index}">主页</a>-->
-                <!--</div>-->
             </div>
         </div>
     </nav>
 </header>
+
+<section class="slider-pro slider" id="slider">
+    <div class="sp-slides">
+
+        <!-- Slides -->
+        <div class="sp-slide main-slides">
+            <div class="img-overlay"></div>
+
+            <img class="sp-image" th:src="@{/images/slider/slider-img-1.jpg}" alt="Slider 1"/>
+
+            <h1 class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500"
+                data-hide-delay="200">
+                <span class="highlight-texts">Consultancy</span>
+            </h1>
+
+            <p class="sp-layer"
+               data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200"
+               data-show-transition="left" data-hide-transition="right">
+                best business
+            </p>
+        </div>
+        <!-- Slides End -->
+
+        <!-- Slides -->
+        <div class="sp-slide main-slides">
+            <div class="img-overlay"></div>
+            <img class="sp-image" th:src="@{/images/slider/slider-img-2.jpg}" alt="Slider 2"/>
+
+            <h1 class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500"
+                data-hide-delay="200">
+                <span class="highlight-texts">Executive</span>
+            </h1>
+
+            <p class="sp-layer"
+               data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200"
+               data-show-transition="left" data-hide-transition="right">
+                best business
+            </p>
+        </div>
+        <!-- Slides End -->
+
+        <!-- Slides -->
+        <div class="sp-slide main-slides">
+            <div class="img-overlay"></div>
+
+            <img class="sp-image" th:src="@{/images/slider/slider-img-3.jpg}" alt="Slider 3"/>
+
+            <h1 class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500"
+                data-hide-delay="200">
+                <span class="highlight-texts">Solution</span>
+            </h1>
+
+            <p class="sp-layer"
+               data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200"
+               data-show-transition="left" data-hide-transition="right">
+                best business
+            </p>
+        </div>
+        <!-- Slides End -->
+
+    </div>
+</section>

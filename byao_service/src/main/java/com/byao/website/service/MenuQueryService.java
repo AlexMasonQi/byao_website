@@ -5,6 +5,7 @@ import com.byao.website.entity.Menu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -28,5 +29,13 @@ public class MenuQueryService
         return menuDao.selectAllThirdMenu();
     }
 
+    public Menu selectMenuById(Integer id)
+    {
+        return menuDao.selectMenuById(id);
+    }
 
+    public ArrayList<Menu> selectSecondMenuByParentId(Integer id, Integer level)
+    {
+        return menuDao.selectSecondMenuByParentId(id, level);
+    }
 }

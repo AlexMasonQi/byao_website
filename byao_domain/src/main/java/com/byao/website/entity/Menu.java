@@ -121,4 +121,10 @@ public class Menu implements Serializable
     {
         this.menus = menus;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Menu{" + "id=" + id + ", menuName='" + menuName + '\'' + ", menuUrl='" + menuUrl + '\'' + ", level=" + level + ", parentId=" + parentId + ", bshow=" + bshow + ", bson=" + bson + ", secondParentId=" + secondParentId + '}';
+    }
 }

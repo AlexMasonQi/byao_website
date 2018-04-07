@@ -18,70 +18,17 @@
 <header th:replace="common/common_head"></header>
 <!-- Header End -->
 
-
-<section class="slider-pro slider" id="slider">
-	<div class="sp-slides">
-
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-			<div class="img-overlay"></div>
-
-			<img class="sp-image" th:src="@{/images/slider/slider-img-1.jpg}" alt="Slider 1"/>
-
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">Consultancy</span>
-			</h1>
-
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				best business
-			</p>
-		</div>
-		<!-- Slides End -->
-
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-		<div class="img-overlay"></div>
-			<img class="sp-image" th:src="@{/images/slider/slider-img-2.jpg}" alt="Slider 2"/>
-
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">Executive</span>
-			</h1>
-
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				best business
-			</p>
-		</div>
-		<!-- Slides End -->
-
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-			<div class="img-overlay"></div>
-
-			<img class="sp-image" th:src="@{/images/slider/slider-img-3.jpg}" alt="Slider 3"/>
-
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">Solution</span>
-			</h1>
-
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				best business
-			</p>
-		</div>
-		<!-- Slides End -->
-
-	</div>
-</section>
 <!-- Main Slider End --> 
 
 
 <br/>
-<p id="position">当前位置：主页 --> 新闻中心 --> 公司新闻</p>
+<p id="position" th:each="first:${firstMenuList}" th:if="${parentId==first.id}">当前位置：主页 --> <span
+		th:text="${first.menuName}"></span>-->
+	<!--<span th:each="second:${secondMenus}" th:if="${second.id==news.id}"><span-->
+	<!--th:text="${second.menuName}"></span></span>-->
+	<span th:each="second:${secondMenus}"><span th:if="${second.id==secondId}"><span
+			th:text="${second.menuName}"></span></span></span>
+</p>
 <hr/>
 <!-- position End  -->
 
@@ -89,77 +36,76 @@
 <div class="backline">
 	<div class="sec">
 		<table>
-			<tr>
-				<td class="hove"><a href="">公司新闻</a></td>
-				<td><a href="">特别关注</a></td>
-				<!-- <td>4</td>
-				<td>5</td> -->
+			<tr th:each="second:${secondMenus}">
+				<!--<td class="hove"><a href="">公司新闻</a></td>-->
+				<!--<td><a href="">特别关注</a></td>-->
+				<td><a th:text="${second.menuName}" th:href="${second.menuUrl}+'?id='+${second.id}"></a></td>
 			</tr>
 		</table>
 	</div>
 </div>
 <div class="container-fluid">
-	<div class="row">
+	<div class="row" th:each="news:${newsList}" th:if="${news.id==secondId}">
 		<div class="col-md-1"></div>
 		<div class="col-md-2">
-			<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">
+			<img class="img-responsive img-rounded" th:src="${news.imageSrc}">
 		</div>
 		<div class="col-md-8">
-			<a href=""><h4>这是标题</h4>
-			<p>这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！这是内容！</p></a>
+			<!--<a href=""><h4>这是标题</h4>-->
+			<p th:text="${news.content}"></p>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
-			<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">
-		</div>
-		<div class="col-md-7">
-			<a href=""><h4>这是标题</h4>
-			<p>内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！</p></a>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
-			<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">
-		</div>
-		<div class="col-md-7">
-			<a href=""><h4>这是标题</h4>
-			<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
-			<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">
-		</div>
-		<div class="col-md-7">
-			<a href=""><h4>这是标题</h4>
-			<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
-			<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">
-		</div>
-		<div class="col-md-7">
-			<a href=""><h4>这是标题</h4>
-			<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
-			<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">
-		</div>
-		<div class="col-md-7">
-			<a href=""><h4>这是标题</h4>
-			<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>
-		</div>
-	</div> 
+	<!--<div class="row">-->
+	<!--<div class="col-md-1"></div>-->
+	<!--<div class="col-md-2">-->
+	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
+	<!--</div>-->
+	<!--<div class="col-md-7">-->
+	<!--<a href=""><h4>这是标题</h4>-->
+	<!--<p>内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！</p></a>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!---->
+	<!--<div class="row">-->
+	<!--<div class="col-md-1"></div>-->
+	<!--<div class="col-md-2">-->
+	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
+	<!--</div>-->
+	<!--<div class="col-md-7">-->
+	<!--<a href=""><h4>这是标题</h4>-->
+	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--<div class="row">-->
+	<!--<div class="col-md-1"></div>-->
+	<!--<div class="col-md-2">-->
+	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
+	<!--</div>-->
+	<!--<div class="col-md-7">-->
+	<!--<a href=""><h4>这是标题</h4>-->
+	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--<div class="row">-->
+	<!--<div class="col-md-1"></div>-->
+	<!--<div class="col-md-2">-->
+	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
+	<!--</div>-->
+	<!--<div class="col-md-7">-->
+	<!--<a href=""><h4>这是标题</h4>-->
+	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--<div class="row">-->
+	<!--<div class="col-md-1"></div>-->
+	<!--<div class="col-md-2">-->
+	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
+	<!--</div>-->
+	<!--<div class="col-md-7">-->
+	<!--<a href=""><h4>这是标题</h4>-->
+	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
+	<!--</div>-->
+	<!--</div> -->
 	<nav aria-label="Page navigation" class="Page">
 	  <ul class="pagination">
 	    <li class="page-item disabled">

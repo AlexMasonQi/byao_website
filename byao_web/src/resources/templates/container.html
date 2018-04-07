@@ -4,79 +4,23 @@
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content=""> 
-<meta name="Author" content="">
-<title>铂钥天下</title>
-
+	<meta name="description" content="">
+	<meta name="Author" content="">
+	<title>Home</title>
 	<head th:replace="common/common_css"></head>
-	<head th:replace="common/common_js"></head>
 
+	<head th:replace="common/common_js"></head>
 </head>
 
 <body>
 <!-- Header End -->
+<!-- Navigation Menu start-->
+
+
+<!-- Header End -->
 <header th:replace="common/common_head"></header>
 <!-- Header End -->
 
-
-<section class="slider-pro slider" id="slider">
-	<div class="sp-slides">
-
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-			<div class="img-overlay"></div>
-
-			<img class="sp-image" th:src="@{/images/slider/slider-img-1.jpg}" alt="Slider 1"/>
-
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">Consultancy</span>
-			</h1>
-
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				best business
-			</p>
-		</div>
-		<!-- Slides End -->
-
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-		<div class="img-overlay"></div>
-			<img class="sp-image" th:src="@{/images/slider/slider-img-2.jpg}" alt="Slider 2"/>
-
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">Executive</span>
-			</h1>
-
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				best business
-			</p>
-		</div>
-		<!-- Slides End -->
-
-		<!-- Slides -->
-		<div class="sp-slide main-slides">
-			<div class="img-overlay"></div>
-
-			<img class="sp-image" th:src="@{/images/slider/slider-img-3.jpg}" alt="Slider 3"/>
-
-			<h1 class="sp-layer slider-text-big"
-			data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-			<span class="highlight-texts">Solution</span>
-			</h1>
-
-			<p class="sp-layer"
-			data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-				best business
-			</p>
-		</div>
-		<!-- Slides End -->
-
-	</div>
-</section>
 <!-- Main Slider End --> 
 
 
@@ -86,7 +30,7 @@
 <!-- position End  -->
 
 
-<div class="backline">
+<div class="backline" id="backline">
 	<div class="sec">
 		<table>
 			<tr>
@@ -103,102 +47,177 @@
 		</table>
 	</div>
 </div>
-<div class="mainContainer">
+<div class="mainContainer" id="mainContainer">
 	<!-- 文字或者图片用这个 -->
 	<!-- <h1>这里是标题</h1>
-	<p>这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！</p> -->
+    <p>这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！</p> -->
 
 	<!-- 视频用这个 -->
 	<!-- <h1>标题</h1>
-	<div class="video">
-		<iframe  src='http://player.youku.com/embed/XMzQ0NzY5NzYxMg==' frameborder=0 'allowfullscreen'></iframe>
-		<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=c88b36c6d453c4be09fe5531382ab55f&tvId=428069600&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
-	</div>
-	<p>这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！</p> -->
-	<div class="music" id="allMusic">
-		<ul>
-			<li>
-				<table>
-					<tr>
-						<th>播放列表</th>
-					</tr>
-				</table>
-			</li>
-			<li>
-				<table>
-					<tr class="all">
-						<td>title</td>
-						<td>singer</td>
-						<td class='id'>1</td>
-					</tr>
-				</table>
-			</li>
-			<li>
-				<table>
-					<tr class="all">
-						<td>title</td>
-						<td>singer</td>
-						<td class='id'>2</td>
-					</tr>
-				</table>
-			</li>
-			<li>
-				<table>
-					<tr class="all">
-						<td>title</td>
-						<td>singer</td>
-						<td class='id'>3</td>
-					</tr>
-				</table>
-			</li>
-			<li>
-				<table>
-					<tr class="all">
-						<td>title</td>
-						<td>singer</td>
-						<td class='id'>4</td>
-					</tr>
-				</table>
-			</li>
-		</ul>
-	</div>
-	<div class="lyrics">
-		<div class="lrc-img"></div>
-		<div class="lrcs">
-			<ul class="lr">
-			</ul>
+    <div class="video">
+        <iframe  src='http://player.youku.com/embed/XMzQ0NzY5NzYxMg==' frameborder=0 'allowfullscreen'></iframe>
+        <iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=c88b36c6d453c4be09fe5531382ab55f&tvId=428069600&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+    </div>
+    <p>这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！这里是内容！</p> -->
+
+	<div class="container music">
+		<div class="row" onselectstart="return false;">
+			<audio src="" style="display: none" id="play">
+			</audio>
+			<span class="icon_menu"></span>
+			<div class="col-sm-4 col-xs-12  music-list">
+				<div class="panel panel-default bootstraPanel">
+					<div class="panel-heading taggerTitle">
+						播放列表
+						<span class="checkBox">
+								<i class="arrow_carrot-2left"></i> 
+							</span>
+					</div>
+					<!-- <div class="taggerTitle">播放列表</div> -->
+					<div class="panel-body test">
+						<table class="table table-hover">
+							<tr class="clickmusic">
+								<td class="id">1</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">2</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">3</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">4</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">1</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">2</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">3</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">4</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">1</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">2</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">3</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">4</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">1</td>
+								<td>歌曲歌曲歌曲歌曲歌曲歌曲</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+							<tr class="clickmusic">
+								<td class="id">1</td>
+								<td>测试</td>
+								<td>歌手手</td>
+								<td>30：00</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-7 col-xs-11 hidden-xs animateLrc">
+				<div class="panel panel-default">
+					<div class="panel-body lrcPanel">
+						<ul class="lrc">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 col-xs-12">
+				<div class="row">
+					<div class="col-sm-4 col-xs-4 pre">
+						<i class=" arrow_carrot-2left_alt "></i>
+					</div>
+					<div class="col-sm-4 col-xs-4 stop">
+						<i class="icon_pause_alt"></i>
+					</div>
+					<div class="col-sm-4 col-xs-4 next">
+						<i class=" arrow_carrot-2right_alt "></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<div clas="row">
+					<div class="col-sm-2 col-xs-3 starTime">00:00</div>
+					<div class="col-sm-8 col-xs-6">
+						<div class="progress" id="timeCss">
+							<div class="progressBar timeBar"></div>
+						</div>
+					</div>
+					<div class="col-sm-2 col-xs-3 endTime">00:00</div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<div class="row">
+
+					<div class="col-sm-2 col-xs-2 voice">
+						<i class="icon_volume-high"></i>
+					</div>
+
+					<div class="col-sm-5 col-xs-5">
+						<div class="progress" id="voiceCss">
+							<div class="progressBar voiceBar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div style="clear: both;"></div>
-	<div class="control">
-		<audio id="player" src="" >
-		  <source th:src="" type="audio/mpeg">
-		</audio>
-		<div class="controler">
-			<div class="btns">
-				<span id="pre">上一首</span>
-				<span id="stop">暂停</span>
-				<span id="next">下一首</span>
-				<div style="clear: both;"></div>
-			</div>
-			<div class="bars">
-				<div class="now-time">00:00</div>
-				<div class="bAr">
-					<div class="bar-color"></div>
-				</div>
-				<div class="end-time">00:00</div>
-				<div class="voices">
-					<div></div>
-					<span class="voices-btn">
-						<div class="voices-color"></div>
-					</span>
-				</div>
-			</div>
-			
-		</div>
 	</div>
-	<div style="clear: both;"></div>
-	</div>
+
 <footer>
 	<div class="foo">
 		<div class="row">
@@ -220,7 +239,7 @@
 				</table>
 			</div>
 			<div class="col-md-1">
-				<img th:src="@{/logo.png}">
+				<img th:src="@{/wx.jpg}">
 			</div>
 			
 		</div>
@@ -252,155 +271,6 @@
 
 
 <script th:src="@{/js/bootstrap.min.js}"></script>
-
-<script type="text/javascript">
-	
-	$(document).ready(function(){
-		var number = null;//当前点击节点标志位，以便ajax向数据库取值
-		var player = $("#player")[0];
-		//两个定时器，当作全局以便关闭
-		var t = null;
-		var currents = null;
-		//进度条函数
-		function shows(){
-		    player.play();
-	    	t = setInterval(function(){
-		    	/*console.log(player.duration,player.currentTime);*/
-		    	var times = ((player.currentTime)/(player.duration))*100;
-		    	$(".bar-color").css("width",times+"%");
-		    	if(parseInt(times) == 100){
-		    		clearInterval(t);
-		    	};
-		    	var m = parseInt(player.duration/60);
-				var s = parseInt(player.duration%60);
-				var mm = parseInt(player.currentTime/60);
-				var ss = parseInt(player.currentTime%60);
-				if(s < 10){
-					$(".end-time").html("0"+m+":"+"0"+s);
-				}else{
-					$(".end-time").html("0"+m+":"+s);//性能不好需要改善
-				}
-				if(ss < 10){
-					$(".now-time").html("0"+mm+":"+"0"+ss);
-				}else{
-					$(".now-time").html("0"+mm+":"+ss);
-				}
-		    }, 1000);  
-
-		 }; 
-		 //歌词解析及滚动效果
-		 function lrc(lrc){
-		 	var lyrics = lrc.split("\n");
-		    var lrcObj = {};
-
-		    var regexTrim = new RegExp("[\\r\\n]", "g");  
-		    var timeReg = /\[\d*:\d*((\.|\:)\d*)*\]/g;
-		    for(let i = 0 ; i < lyrics.length ; i++){
-		    	var lyric = decodeURIComponent(lyrics[i]).replace(regexTrim, '');
-		    	var clause = lyric.replace(timeReg,'');//歌词
-		    	var timeRegExpArr = lyric.match(timeReg);
-		    	if(!timeRegExpArr)continue;
-		    	/*console.log(clause);*/
-		    	for(var k = 0,h = timeRegExpArr.length;k < h;k++) {
-		            var t = timeRegExpArr[k];
-		            var min = Number(String(t.match(/\[\d*/i)).slice(1)),
-		                sec = Number(String(t.match(/\:\d*/i)).slice(1));
-		            var time = min * 60 + sec;
-		            if(lrcObj[time]){
-		            	lrcObj[time] = lrcObj[time] + clause;
-		            }else{
-		            	lrcObj[time] = clause;
-		            }
-				}
-		    }
-		    for(let i in lrcObj){
-		    	if(lrcObj[i]){
-		    		$(".lr").append("<li>"+lrcObj[i]+"</li>");
-		    	}
-		    }
-		    
-
-		 } 
-		 //切换背景图函数
-		 function ani(arr,length){
-		 	var imgArray = [];
-		 	for(let i = 1 ; i <= length;i++){
-				imgArray.push(arr+i+".jpg");
-			}
-		 	var n = 0;
-		 	$(".lyrics").css('background','url('+imgArray[0]+')');
-		 	currents = setInterval(function(){
-		 		n++;
-		 		/*$(".lrc-img").css('opacity',0);*/
-		 		if(n < imgArray.length){
-		 			$(".lyrics").css('background','url('+imgArray[n]+')');
-		 		}else{
-		 			n = 0;
-		 			$(".lyrics").css('background','url('+imgArray[n]+')');
-		 		}
-		 		/*$(".lrc-img").animate({opacity: '1'},3000);*/
-		 		
-		 	},15000);
-		 }
-		 //双击事件函数
-		$(".all").on("dblclick",function(){
-		  	var child = $(this).children(".id").text();
-		  	var data = "action="+child;
-		  	number = child;
-		  	if(currents){
-		  		clearInterval(currents);
-		  	}
-
-			$.getJSON("index.php",data,function(json){
-				console.log("A");
-				player.src = json.src;
-				$.get(json.lrc).success(function(content){
-					lrc(content);
-				});
-				ani(json.img,json.number);
-			    shows();
-			});
-		});
-		//暂停函数
-		$("#stop").click(function(){
-			if (player.paused){ 
-	           shows();
-	        }else {
-	            player.pause();
-	            if(t){
-	            	clearInterval(t);
-	            }
-	        }
-		});
-		//上一曲函数
-		$("#pre").click(function(){
-			var data = "action="+(--number);
-			if(currents){
-				clearInterval(currents);
-			}
-			$.getJSON("index.php",data,function(json){
-				player.src = json.src;
-				ani(json.img,json.number);
-			    shows();
-			});
-			
-		});
-		//下一曲函数
-		$("#next").click(function(){
-			var data = "action="+(++number);
-			if(currents){
-				clearInterval(currents);
-			}
-			$.getJSON("index.php",data,function(json){
-				player.src = json.src;
-				ani(json.img,json.number);
-			    shows();
-			});
-		});
-
-		
-	});
-	
-</script>
+<script th:src="@{/js/music.js}"></script>
 </body>
 </html>
