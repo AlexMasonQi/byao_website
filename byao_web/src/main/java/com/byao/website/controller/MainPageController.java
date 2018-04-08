@@ -2,11 +2,9 @@ package com.byao.website.controller;
 
 import com.byao.website.entity.CompanyInfo;
 import com.byao.website.entity.Menu;
+import com.byao.website.entity.Music;
 import com.byao.website.entity.NewsCenter;
-import com.byao.website.service.CompanyInfoQueryService;
-import com.byao.website.service.MediaQueryService;
-import com.byao.website.service.MenuQueryService;
-import com.byao.website.service.NewsCenterQueryService;
+import com.byao.website.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +30,9 @@ public class MainPageController
 
     @Autowired
     private MediaQueryService mediaQueryService;
+
+    @Autowired
+    private MusicQueryService musicQueryService;
 
     @RequestMapping("/index")
     public String gotoMainPage(Map model)
@@ -174,6 +175,10 @@ public class MainPageController
                                 model.put("secondId", secondId);
                                 model.put("parentId", parentId);
                                 model.put("thirdMenu", thirdMenu);
+
+                                var musicList = musicQueryService.selectAllSongs();
+                                model.put("musicList", musicList);
+
                                 result = "container";
                             }
                             break;
@@ -196,6 +201,15 @@ public class MainPageController
         }
 
         return result;
+    }
+
+    @RequestMapping("/play")
+    @ResponseBody
+    public Music playSongs(Integer id)
+    {
+        Music music = musicQueryService.selectSongsById(id);
+
+        return music;
     }
 
     @RequestMapping("/container")

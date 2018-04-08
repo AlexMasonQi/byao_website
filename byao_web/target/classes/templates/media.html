@@ -13,6 +13,18 @@
 
 </head>
 
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    var contextPath = /*[[${#httpServletRequest.contextPath}]]*/'';
+
+    function showArticalPage(mediaId, secondId, parentId) {
+        window.location.href = contextPath + "/showArticalPage?mediaId=" + mediaId + "&secondId=" + secondId + "&parentId=" + parentId;
+    }
+
+    /*]]>*/
+</script>
+
 <body>
 <!-- Header End -->
 <header th:replace="common/common_head"></header>
@@ -22,80 +34,42 @@
 
 
 <br/>
-<p id="position">当前位置：主页 --> 公司概况 --> 公司介绍</p>
+<p id="position" th:each="first:${firstMenuList}" th:if="${parentId==first.id}">当前位置：主页 --> <span
+		th:text="${first.menuName}"></span>-->
+	<span th:each="second:${secondMenus}" th:if="${second.id==secondId}"><span
+			th:text="${second.menuName}"></span></span>
+</p>
 <hr/>
 <!-- position End  -->
-
 
 <div class="backline">
 	<div class="sec">
 		<table>
-			<tr>
-				<td class="hove"><a href="">影视</a></td>
-				<td><a href="">音乐</a></td>
-				<td><a href="">慈善</a></td>
-				<td><a href="">培训</a></td>
+			<tr th:each="second:${secondMenus}">
+				<td><a th:text="${second.menuName}"
+					   th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}"></a>
+				</td>
 
 				<!-- <td class="hove"><a href="">公司介绍</a></td>
 				<td><a href="">领导致辞</a></td>
 				<td><a href="">组织机构</a></td> -->
-				
 			</tr>
 		</table>
 	</div>
 </div>
 <div class="media-Container ">
 	<ul class="fold_wrap" id="sm">
-    	<li>
-    		<a href="#">
-    			<div class="mask_b"><h4>影视剧承制</h4></div>
-    			<div class="pic_auto">
-    				<img th:src="@{/images/img-portfolio/portfolio1.jpg}">
-    			</div>
-    		</a>
-    	</li>
-    	<li>
-    		<a href="#">
-    			<div class="mask_b"><h4>影视剧出品</h4></div>
-    			<div class="pic_auto">
-    				<img th:src="@{/images/img-portfolio/portfolio2.jpg}">
-    			</div>
-    		</a>
-    	</li>
-    	<li>
-    		<a href="#">
-    			<div class="mask_b"><h4>MV</h4></div>
-    			<div class="pic_auto">
-    				<img th:src="@{/images/img-portfolio/portfolio3.jpg}">
-    			</div>
-    		</a>
-    	</li>
-    	<li>
-    		<a href="#">
-    			<div class="mask_b"><h4>星约艺人</h4></div>
-    			<div class="pic_auto">
-    				<img th:src="@{/images/img-portfolio/portfolio4.jpg}">
-    			</div>
-    		</a>
-    	</li>
-    	<li>
-    		<a href="#">
-    			<div class="mask_b"><h4>影视剧孵化</h4></div>
-    			<div class="pic_auto">
-    				<img th:src="@{/images/img-portfolio/portfolio5.jpg}">
-    			</div>
-    		</a>
-    	</li>
-    	<li>
-    		<a href="#">
-    			<div class="mask_b"><h4>企业宣传片</h4></div>
-    			<div class="pic_auto">
-    				<img th:src="@{/images/img-portfolio/portfolio6.jpg}">
-    			</div>
-    		</a>
-    	</li>
-    	<div style="clear: both;"></div>
-    </ul>
+		<li th:each="third:${thirdMenus}">
+			<a href="javascript:void(0)"
+			   th:onclick="'javascript:showArticalPage(\''+${third.mediaId}+'\',\''+${secondId}+'\',\''+${parentId}+'\');'">
+				<div class="mask_b"><h4 th:text="${third.name}"></h4></div>
+				<div class="pic_auto">
+					<img th:src="${third.images}">
+				</div>
+			</a>
+		</li>
+		<div style="clear: both;"></div>
+	</ul>
 </div>
 
 <footer>
