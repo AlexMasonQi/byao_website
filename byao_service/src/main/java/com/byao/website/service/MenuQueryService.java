@@ -34,8 +34,8 @@ public class MenuQueryService
         return menuDao.selectMenuById(id);
     }
 
-    public ArrayList<Menu> selectSecondMenuByParentId(Integer id, Integer level)
+    public ArrayList<Menu> selectSonMenuByParentId(Integer id, Integer level)
     {
-        return menuDao.selectSecondMenuByParentId(id, level);
+        return menuDao.selectSonMenuByParentId(id, level);
     }
 }

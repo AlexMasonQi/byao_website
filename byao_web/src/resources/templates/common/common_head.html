@@ -56,7 +56,7 @@
                         <ul class="dropdown-menu" th:if="${first.bson==1}">
                             <li th:each="second:${secondMenuList}" th:if="${second.parentId==first.id}">
                                 <a th:text="${second.menuName}" class="second-menu"
-                                   th:href="${first.menuUrl}+'?id='+${second.id}">
+                                   th:href="${first.menuUrl}+'?id='+${second.id}+'&parentId='+${second.parentId}">
                                 </a>
                             </li>
                         </ul>

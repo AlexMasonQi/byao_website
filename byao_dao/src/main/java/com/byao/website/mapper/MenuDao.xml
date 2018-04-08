@@ -59,7 +59,7 @@
         select id,menu_name,menu_url,level,parent_id,bshow,bson from menu where id=#{id}
     </select>
 
-    <select id="selectSecondMenuByParentId" resultMap="menuMap">
+    <select id="selectSonMenuByParentId" resultMap="menuMap">
         select id,menu_name,menu_url from menu where parent_id=#{id} and level=#{level}
     </select>
 

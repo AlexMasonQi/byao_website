@@ -18,5 +18,5 @@ public interface MenuDao
 
     Menu selectMenuById(@Param("id") Integer id);
 
-    ArrayList<Menu> selectSecondMenuByParentId(@Param("id") Integer id, @Param("level") Integer level);
+    ArrayList<Menu> selectSonMenuByParentId(@Param("id") Integer id, @Param("level") Integer level);
 }
