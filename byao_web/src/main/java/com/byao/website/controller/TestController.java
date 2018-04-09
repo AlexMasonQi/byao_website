@@ -16,14 +16,4 @@ public class TestController
         return "Test";
     }
 
-    @RequestMapping("/testEditor")
-    @ResponseBody
-    public String testEditor(HttpServletRequest request, String ckeditor)
-    {
-        System.out.println(request.getServletContext().getRealPath(""));
-        System.out.println(ckeditor);
-
-        return "OK";
-    }
-
 }

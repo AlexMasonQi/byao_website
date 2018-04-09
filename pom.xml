@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.byao</groupId>
   <artifactId>byao_website</artifactId>
-  <packaging>pom</packaging>
+
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>byao_web</module>
@@ -12,6 +12,7 @@
     <module>byao_domain</module>
     <module>byao_dao</module>
   </modules>
+  <packaging>pom</packaging>
   <name>byao_website</name>
   <description>byao</description>
 
@@ -58,14 +59,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
-    <!-- maven-war-plugin -->
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-war-plugin</artifactId>
-      <version>2.6</version>
-    </dependency>
-
 
     <!-- servlet-api -->
     <dependency>
@@ -180,6 +173,12 @@
       <version>1.10</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>21.0</version>
+    </dependency>
+
 
   </dependencies>
   <!--<build>-->
@@ -206,37 +205,47 @@
           <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
-            <version>6.1</version> <!-- Use newer version of ASM -->
+            <version>6.0_BETA</version> <!-- Use newer version of ASM -->
           </dependency>
         </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.0</version>
       </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
           <mainClass>com.byao.website.ByaoApp</mainClass>
-          <includes>
-            <include>
-              <groupId>com.byao</groupId>
-              <artifactId>byao_util</artifactId>
-            </include>
-            <include>
-              <groupId>com.byao</groupId>
-              <artifactId>byao_domain</artifactId>
-            </include>
-            <include>
-              <groupId>com.byao</groupId>
-              <artifactId>byao_dao</artifactId>
-            </include>
-            <include>
-              <groupId>com.byao</groupId>
-              <artifactId>byao_service</artifactId>
-            </include>
-            <include>
-              <groupId>com.byao</groupId>
-              <artifactId>byao_web</artifactId>
-            </include>
-          </includes>
+          <!--<includes>-->
+          <!--<include>-->
+          <!--<groupId>com.byao</groupId>-->
+          <!--<artifactId>byao_util</artifactId>-->
+          <!--</include>-->
+          <!--<include>-->
+          <!--<groupId>com.byao</groupId>-->
+          <!--<artifactId>byao_domain</artifactId>-->
+          <!--</include>-->
+          <!--<include>-->
+          <!--<groupId>com.byao</groupId>-->
+          <!--<artifactId>byao_dao</artifactId>-->
+          <!--</include>-->
+          <!--<include>-->
+          <!--<groupId>com.byao</groupId>-->
+          <!--<artifactId>byao_service</artifactId>-->
+          <!--</include>-->
+          <!--<include>-->
+          <!--<groupId>com.byao</groupId>-->
+          <!--<artifactId>byao_web</artifactId>-->
+          <!--</include>-->
+          <!--</includes>-->
         </configuration>
         <executions>
           <execution>
