@@ -1,9 +1,6 @@
 package com.byao.website.controller;
 
-import com.byao.website.entity.CompanyInfo;
-import com.byao.website.entity.Menu;
-import com.byao.website.entity.Music;
-import com.byao.website.entity.NewsCenter;
+import com.byao.website.entity.*;
 import com.byao.website.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,6 +31,12 @@ public class MainPageController
     @Autowired
     private MusicQueryService musicQueryService;
 
+    @Autowired
+    private BasicInfoQueryService basicInfoQueryService;
+
+    @Autowired
+    private VideoQueryService videoQueryService;
+
     @RequestMapping("/index")
     public String gotoMainPage(Map model)
     {
@@ -45,6 +48,12 @@ public class MainPageController
 
         List<Menu> thirdMenuList = menuQueryService.selectThirdMenu();
         model.put("thirdMenuList", thirdMenuList);
+
+        BasicInfo basicInfo = basicInfoQueryService.selectBasicInfoByStatus();
+        model.put("basicInfo", basicInfo);
+
+        List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
+        model.put("imageList", rotationList);
 
         return "index";
     }
@@ -58,7 +67,21 @@ public class MainPageController
         List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
         model.put("secondMenuList", secondMenuList);
 
+        BasicInfo basicInfo = basicInfoQueryService.selectBasicInfoByStatus();
+        model.put("basicInfo", basicInfo);
+
+        List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
+        model.put("imageList", rotationList);
+
         var news = newsCenterQueryService.selectNewsById(id);
+
+        for (var newsCenter : news)
+        {
+            var length = newsCenter.getContent().length();
+            var str = newsCenter.getContent().substring(0, 100);
+            newsCenter.setContent(str);
+        }
+
         var secondMenus = new ArrayList<Menu>();
 
         for (var menu : firstMenuList)
@@ -87,6 +110,12 @@ public class MainPageController
         List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
         model.put("secondMenuList", secondMenuList);
 
+        BasicInfo basicInfo = basicInfoQueryService.selectBasicInfoByStatus();
+        model.put("basicInfo", basicInfo);
+
+        List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
+        model.put("imageList", rotationList);
+
         CompanyInfo companyInformation = companyInfoQueryService.selectCompanyInfoById(id);
         var secondMenus = new ArrayList<Menu>();
 
@@ -113,6 +142,12 @@ public class MainPageController
 
         List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
         model.put("secondMenuList", secondMenuList);
+
+        BasicInfo basicInfo = basicInfoQueryService.selectBasicInfoByStatus();
+        model.put("basicInfo", basicInfo);
+
+        List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
+        model.put("imageList", rotationList);
 
         for (var firstMenu : firstMenuList)
         {
@@ -144,6 +179,12 @@ public class MainPageController
         List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
         model.put("secondMenuList", secondMenuList);
 
+        BasicInfo basicInfo = basicInfoQueryService.selectBasicInfoByStatus();
+        model.put("basicInfo", basicInfo);
+
+        List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
+        model.put("imageList", rotationList);
+
         for (var firstMenu : firstMenuList)
         {
             if (parentId.equals(firstMenu.getId()))
@@ -164,7 +205,11 @@ public class MainPageController
                                 model.put("secondId", secondId);
                                 model.put("parentId", parentId);
                                 model.put("thirdMenu", thirdMenu);
-                                result = "mv";
+
+                                var videoList = videoQueryService.selectAllVideos();
+                                model.put("videoList", videoList);
+
+                                result = "company_video";
                             }
                             break;
 
@@ -189,7 +234,7 @@ public class MainPageController
                                 model.put("secondId", secondId);
                                 model.put("parentId", parentId);
                                 model.put("thirdMenu", thirdMenu);
-                                result = "artical";
+                                result = "article";
                             }
                         }
                         break;
@@ -212,15 +257,12 @@ public class MainPageController
         return music;
     }
 
-    @RequestMapping("/container")
-    public String containerPage(Map model)
+    @RequestMapping("/playVideo")
+    @ResponseBody
+    public Video playVideos(Integer id)
     {
-        List<Menu> firstMenuList = menuQueryService.selectAllFirstMenu();
-        model.put("firstMenuList", firstMenuList);
+        Video video = videoQueryService.selectVideoById(id);
 
-        List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
-        model.put("secondMenuList", secondMenuList);
-
-        return "container";
+        return video;
     }
 }

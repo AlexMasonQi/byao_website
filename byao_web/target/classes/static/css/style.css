@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Righteous');
+/* @import url('https://fonts.googleapis.com/css?family=Comfortaa|Righteous'); */
 body {
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive;  */
   background: #fff;
   font-size: 14px;
   font-weight: 400;
@@ -648,7 +648,7 @@ section#services {
     line-height: 20px;
     font-weight: 700;
     margin-top: 10px;
-    font-family: 'Righteous', cursive;
+    /* font-family: 'Righteous', cursive; */
     letter-spacing: 3px;
     color: #fff;
 }
@@ -1085,7 +1085,7 @@ header.page-header .main-menu.minified{
 }
 
 .portfolio-btn-wrapper a.portfolio-btn{
-	font-family: 'Raleway',cursive;
+	/* font-family: 'Raleway',cursive; */
 	font-weight: 400;
 	color: #ffffff;
 	display: inline;
@@ -1356,7 +1356,7 @@ header.page-header .main-menu.minified{
 .contact-section .contact-form .input-fields label{
 	display: block;
 	font-size: 14px;
-	font-family: 'Raleway',cursive;
+	/* font-family: 'Raleway',cursive; */
 	font-weight: 400;
 	margin-bottom: 10px;
 }

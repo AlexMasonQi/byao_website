@@ -1,7 +1,9 @@
 package com.byao.website.service;
 
 import com.byao.website.dao.MenuDao;
+import com.byao.website.dao.RotationDao;
 import com.byao.website.entity.Menu;
+import com.byao.website.entity.Rotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +15,10 @@ public class MenuQueryService
 {
     @Autowired
     private MenuDao menuDao;
-    
+
+    @Autowired
+    private RotationDao rotationDao;
+
     public List<Menu> selectAllFirstMenu()
     {
         return menuDao.selectAllFirstMenu();
@@ -37,5 +42,15 @@ public class MenuQueryService
     public ArrayList<Menu> selectSonMenuByParentId(Integer id, Integer level)
     {
         return menuDao.selectSonMenuByParentId(id, level);
+    }
+
+    public Integer selectImagesCount()
+    {
+        return rotationDao.selectImagesCount();
+    }
+
+    public List<Rotation> selectImagesByCount(Integer count)
+    {
+        return rotationDao.selectImageRotationByCount(count);
     }
 }
