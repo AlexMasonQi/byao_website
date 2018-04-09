@@ -5,44 +5,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2af510-20e6-4f1e-81e3-3e983c032e71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/BasicInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/RotationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/VideoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/BasicInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/RotationDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/VideoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/BasicInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/Rotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/BasicInfoQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/VideoQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_web/src/resources/static/js/music.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_web/src/resources/static/js/video.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/common/common_foot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/company_video.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/byao_web_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/byao_web_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/byao_website_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/byao_website_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__backport_util_concurrent_backport_util_concurrent_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__classworlds_classworlds_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_38.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nekohtml_nekohtml_1_9_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nekohtml_xercesMinimal_1_9_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jackrabbit_jackrabbit_jcr_commons_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_jackrabbit_jackrabbit_webdav_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_logging_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_sink_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_archiver_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_manager_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_core_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_error_diagnostics_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_model_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_monitor_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_api_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_descriptor_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_parameter_documenter_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_registry_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_profile_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_project_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_repository_metadata_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_settings_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_plugins_maven_war_plugin_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_reporting_maven_reporting_api_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_filtering_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_mapping_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_shared_utils_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_file_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_http_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_http_lightweight_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_http_shared_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_provider_api_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_ssh_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_ssh_common_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_ssh_external_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_webdav_jackrabbit_1_0_beta_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_archiver_2_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_container_default_1_0_alpha_9_stable_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_interactivity_api_1_0_alpha_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_interpolation_1_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_io_2_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_0_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jdk14_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_build_api_0_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_cipher_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_sec_dispatcher_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/MenuQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/MenuQueryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/static/music/杨丞琳 - 点水.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/static/music/杨丞琳 - 点水.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/artical.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/common/common_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/common/common_head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/companyInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/companyInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/container.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/container.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/media.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/static/music/img/portfolio2 - 副本.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/templates/container.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/templates/container.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/templates/media.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/templates/media.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_dao/byao_dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_dao/byao_dao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_domain/byao_domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_domain/byao_domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_service/byao_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_service/byao_service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/byao_util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_util/byao_util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/target/classes/com/byao/website/config/DruidConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/target/classes/com/byao/website/util/DateTimeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/target/classes/com/byao/website/util/DoubleUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/target/classes/com/byao/website/util/Encrypt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/target/classes/com/byao/website/util/RedisUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/target/classes/com/byao/website/util/ZipUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_web/byao_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/byao_web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/ByaoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/ByaoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,23 +114,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MainPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java">
+      <file leaf-file-name="ByaoApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/ByaoApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="100" column="22" lean-forward="true" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="62">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/list.html">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+            <state relative-caret-position="293">
+              <caret line="205" column="22" lean-forward="true" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_util/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_domain/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_dao/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_web/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -111,13 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/byao_web/src/resources/templates/Test.html" />
-        <option value="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/CompanyInfo.xml" />
-        <option value="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/CompanyInfo.java" />
-        <option value="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/CompanyInfoQueryService.java" />
-        <option value="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/CompanyInfoDao.java" />
-        <option value="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/CompanyInfo.java" />
         <option value="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/CompanyInfoDao.xml" />
         <option value="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/Menu.java" />
         <option value="$PROJECT_DIR$/byao_util/src/test/java/test/TestFile.java" />
@@ -162,6 +248,13 @@
         <option value="$PROJECT_DIR$/byao_web/src/resources/static/js/video.js" />
         <option value="$PROJECT_DIR$/byao_web/src/resources/templates/company_video.html" />
         <option value="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java" />
+        <option value="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/ByaoApp.java" />
+        <option value="$PROJECT_DIR$/byao_util/pom.xml" />
+        <option value="$PROJECT_DIR$/byao_domain/pom.xml" />
+        <option value="$PROJECT_DIR$/byao_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/byao_web/pom.xml" />
+        <option value="$PROJECT_DIR$/byao_service/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -198,6 +291,12 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="100" />
@@ -519,10 +618,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_offcn_sem" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1576,19 +1675,26 @@
       <option name="project" value="LOCAL" />
       <updated>1522586191817</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加视频播放功能">
+      <created>1523258450422</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1523258450422</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151604000" />
+    <option name="totallyTimeSpent" value="160894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5080429" side_tool="true" weight="0.34214187" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5051414" side_tool="true" weight="0.77468705" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32969153" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -1596,7 +1702,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4919571" visible="true" weight="0.34909597" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49100256" weight="0.34909597" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -1606,7 +1712,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4914071" weight="0.32684284" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32962447" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49485862" visible="true" weight="0.31432545" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2377892" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
@@ -1688,11 +1794,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="1.对所有html页面进行了一些小小的修改，主要是添加了Thymeleaf模板引擎的一些元素。&#10;2.TestPage是测试页面，专供测试一些功能，对应的TestController也是一个测试的Controller。" />
     <MESSAGE value="修改测试页面" />
     <MESSAGE value="代码修复" />
     <MESSAGE value="导航栏添加链接" />
-    <option name="LAST_COMMIT_MESSAGE" value="导航栏添加链接" />
+    <MESSAGE value="添加视频播放功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加视频播放功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1700,76 +1808,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="127" column="223" selection-start-line="127" selection-start-column="223" selection-end-line="127" selection-end-column="223" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_util/src/test/java/test/TestFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/CompanyInfoDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/NewsCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/NewsCenterDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/NewsCenterQueryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/MenuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/NewsCenterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/Media.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="87" column="171" lean-forward="true" selection-start-line="87" selection-start-column="171" selection-end-line="87" selection-end-column="171" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/MediaDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1849,13 +1887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/companyInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -2104,6 +2135,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -2114,10 +2152,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/list.html">
+    <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/companyInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        <state relative-caret-position="-2">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_util/src/test/java/test/TestFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_util/byao_util.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3799" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_util/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/ByaoApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/apache-maven-3.5.2/conf/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="205" column="22" lean-forward="true" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -2127,10 +2233,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>byao_web:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -2198,7 +2306,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>google-collect-1.0</last-edited>
+          <last-edited>Maven: com.byao:byao_dao:1.0-SNAPSHOT</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

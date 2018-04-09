@@ -20,8 +20,8 @@ public class ByaoApp extends SpringBootServletInitializer
         return application.sources(ByaoApp.class);
     }
 
-    public static void main(String[] args)
-    {
-        SpringApplication.run(ByaoApp.class, args);
-    }
+//    public static void main(String[] args)
+//    {
+//        SpringApplication.run(ByaoApp.class, args);
+//    }
 }

@@ -14,12 +14,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="byao_dao" target="1.10" />
-      <module name="byao_domain" target="1.10" />
-      <module name="byao_service" target="1.10" />
-      <module name="byao_util" target="1.10" />
-      <module name="byao_web" target="1.10" />
-      <module name="byao_website" target="1.10" />
+      <module name="byao_dao" target="10" />
+      <module name="byao_domain" target="10" />
+      <module name="byao_service" target="10" />
+      <module name="byao_util" target="10" />
+      <module name="byao_web" target="10" />
+      <module name="byao_website" target="10" />
     </bytecodeTargetLevel>
   </component>
 </project>

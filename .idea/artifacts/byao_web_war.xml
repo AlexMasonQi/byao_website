@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="byao_web:war">
+    <output-path>$PROJECT_DIR$/byao_web/target</output-path>
+    <root id="archive" name="Bytx_App.war">
+      <element id="artifact" artifact-name="byao_web:war exploded" />
+    </root>
+  </artifact>
+</component>
