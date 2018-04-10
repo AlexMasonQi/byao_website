@@ -19,6 +19,7 @@ public class DateTimeUtil
 {
 
 
+
     /**
      * 获得当前日期
      *
@@ -33,7 +34,6 @@ public class DateTimeUtil
     {
         return DateFormatUtils.ISO_DATE_FORMAT.format(time);
     }
-
     /**
      * 获得当前日期和时间
      *
@@ -70,7 +70,6 @@ public class DateTimeUtil
         String format = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date(timestamp));
         return format;
     }
-
     //根据unix获取年月日时分秒
     public static String getDateTimeYMDHMS(String unix)
     {
@@ -80,6 +79,7 @@ public class DateTimeUtil
 
     /**
      * 获得当前日期的前一天
+     *
      *
      * @return
      */
@@ -93,6 +93,7 @@ public class DateTimeUtil
 
     /**
      * 获得当前日期的后一天
+     *
      *
      * @return
      */
@@ -222,6 +223,7 @@ public class DateTimeUtil
     }
 
 
+
     /*
      * 将时间转换为时间戳
      */
@@ -234,7 +236,6 @@ public class DateTimeUtil
         res = String.valueOf(ts);
         return res;
     }
-
     /*
      * 将时间戳转换为时间
      */
@@ -250,7 +251,6 @@ public class DateTimeUtil
 
     /**
      * 获取自2017-07-01后的所有月份
-     *
      * @return
      */
     public static List<HashMap<String, String>> getYearMoth()
@@ -276,10 +276,9 @@ public class DateTimeUtil
         return listMap;
 
     }
-
     /**
-     * 将当前日期yyyy-MM-dd转换成秒 Integer
-     * 一般用于开始时间
+     *将当前日期yyyy-MM-dd转换成秒 Integer
+     *一般用于开始时间
      */
     public static Integer getIStartDate(String startDate) throws ParseException
     {
@@ -293,8 +292,8 @@ public class DateTimeUtil
     }
 
     /**
-     * 将当前日期yyyy-MM-dd 加一天转换成秒 Integer
-     * 一般用于结束时间
+     *将当前日期yyyy-MM-dd 加一天转换成秒 Integer
+     *一般用于结束时间
      */
     public static Integer getIEndDate(String endDate) throws ParseException
     {
@@ -311,7 +310,6 @@ public class DateTimeUtil
 
     /**
      * 获取unix十位时间戳
-     *
      * @return
      */
     public static Integer getUnixTime()
@@ -322,7 +320,6 @@ public class DateTimeUtil
 
     /**
      * 获取unix十位时间戳
-     *
      * @return
      */
     public static Integer getYMDString()
@@ -339,7 +336,6 @@ public class DateTimeUtil
 
     /**
      * 获取今年加以后三年
-     *
      * @return
      */
     public static List<String> getNextThreeYear()
@@ -358,7 +354,6 @@ public class DateTimeUtil
 
     /**
      * 获取今年加以前以后三年共6年
-     *
      * @return
      */
     public static List<String> getAroundThreeYear()
@@ -442,7 +437,6 @@ public class DateTimeUtil
         Date date1 = df1.parse(date1Str);
         return df2.format(date1);
     }
-
     public static Long getStartUnixTime(String date1Str) throws ParseException
     {
         DateFormat df1 = new SimpleDateFormat("yyyy-MM-dd HH:mm-");
@@ -468,9 +462,8 @@ public class DateTimeUtil
 
     /**
      * 获取两个时间戳之间相差的天数
-     *
      * @param startTime 开始时间戳
-     * @param endTime   结束时间戳
+     * @param endTime  结束时间戳
      */
     public static Integer getTimeMillisPoor(Long startTime, Long endTime)
     {
@@ -480,6 +473,7 @@ public class DateTimeUtil
 
     /**
      * 获得当前日期的前N天
+     *
      *
      * @return
      */
@@ -492,6 +486,7 @@ public class DateTimeUtil
 
     /**
      * 获得当前日期的前N天 unix时间戳
+     *
      *
      * @return
      */
@@ -515,6 +510,7 @@ public class DateTimeUtil
 
     /**
      * 获得当前日期的前N天 unix时间戳
+     *
      *
      * @return
      */
@@ -540,7 +536,6 @@ public class DateTimeUtil
 
     /**
      * 获得增加分钟后的时间信息，格式为2017-10-30 19:00
-     *
      * @param addMinutes
      * @return
      */
@@ -550,7 +545,6 @@ public class DateTimeUtil
         Date addMinutesDate = DateUtils.addMinutes(currentDate, addMinutes);
         return DateFormatUtils.format(addMinutesDate, "yyyy-MM-dd HH:mm");
     }
-
     /**
      * Unix时间戳转 yyyy-MM-dd HH:mm
      */
@@ -612,7 +606,6 @@ public class DateTimeUtil
 
     /**
      * 获得增加/减少 分钟后的时间戳
-     *
      * @param addMinutes
      * @return
      */
@@ -621,13 +614,11 @@ public class DateTimeUtil
         return getUnixTime() + addMinutes * 60;
     }
 
-    /**
-     * 根据当前日期加上n天之后的时间
-     *
-     * @return : java.lang.Integer
+    /**根据当前日期加上n天之后的时间
      * @author:hushihai
      * @date:11:17 2017/11/18
      * @params:[addTime, courseMonthly]
+     * @return : java.lang.Integer
      */
     public static Integer getUnixAddDays(Date addTime, Short courseMonthly)
     {
@@ -691,11 +682,11 @@ public class DateTimeUtil
     }
 
     /**
-     * @param
-     * @return
      * @description 获取过去n个月份 yyyy-MM
      * @author lishibin
      * @date 2018/1/24 11:03
+     * @param
+     * @return
      */
     public static List<String> getPastMonth(int n)
     {
@@ -711,13 +702,12 @@ public class DateTimeUtil
         }
         return months;
     }
-
     /**
-     * @param
-     * @return java.util.List<java.lang.String>
      * @description 获取某月yyyy-MM的日期集合 yyyy-MM-dd
      * @author lishibin
      * @date 2018/1/24 13:47
+     * @param
+     * @return java.util.List<java.lang.String>
      */
     public static List<String> getDaysInMonth(String month) throws ParseException
     {
@@ -731,6 +721,7 @@ public class DateTimeUtil
      * @Author: lishibin
      * @Description: 根据传入的日期获取所在月份所有日期（当前日期之前的）
      * @Date: Created in 2018/1/24 14:22
+     *
      */
     public static List<String> getAllDaysMonthByDate(Date d)//根据传入的日期获取所在月份所有日期
     {
@@ -751,6 +742,7 @@ public class DateTimeUtil
      * @Author: lishibin
      * @Description: 获取日期所在月份的月初
      * @Date: Created in 2018/1/24 14:22
+     *
      */
     private static Date getMonthStart(Date date)
     {
@@ -765,6 +757,7 @@ public class DateTimeUtil
      * @Author: lishibin
      * @Description: 获取日期所在月份的月末
      * @Date: Created in 2018/1/24 14:24
+     *
      */
     private static Date getMonthEnd(Date date)
     {
@@ -775,11 +768,11 @@ public class DateTimeUtil
         calendar.add(Calendar.DATE, (-index));
         return calendar.getTime();
     }
-
     /**
      * @Author: lishibin
      * @Description: 获取下一天
      * @Date: Created in 2018/1/24 14:25
+     *
      */
     private static Date getNext(Date date)
     {
@@ -796,15 +789,13 @@ public class DateTimeUtil
         return new Date(Long.valueOf(time));
     }
 
-    /**
-     * 获取两个日期间的所有日期
-     * 参数格式:startDate yyyy-MM-dd
-     * endDate yyyy-MM-dd
-     *
-     * @return : java.util.List<java.lang.String>
+    /**获取两个日期间的所有日期
+     *  参数格式:startDate yyyy-MM-dd
+     *       endDate yyyy-MM-dd
      * @author:hushihai
      * @date:9:54 2018/3/7
      * @params:[]
+     * @return : java.util.List<java.lang.String>
      */
     public static List<String> getDates(String startDate, String endDate) throws ParseException
     {
@@ -821,6 +812,122 @@ public class DateTimeUtil
             dd.add(Calendar.DAY_OF_MONTH, 1);//进行当前日期月份加1
         }
         return dates;
+    }
+
+    /**
+     * 获得当前年份
+     *
+     * @return
+     */
+    public static String getSysYear()
+    {
+        Calendar date = Calendar.getInstance();
+        String year = String.valueOf(date.get(Calendar.YEAR));
+        return year;
+    }
+
+    /**
+     * 根据传入日期获取年份 参数格式 : 'yyyy-MM-dd'
+     *
+     * @return : java.lang.Integer
+     * @author:hushihai
+     * @date:15:48 2018/3/13
+     * @params:[date]
+     */
+    public static Integer getYearByYMD(String date) throws ParseException
+    {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new SimpleDateFormat("yyyy-MM-dd").parse(date));
+        Integer year = calendar.get(Calendar.YEAR);
+        return year;
+    }
+
+    /**
+     * @param
+     * @return
+     * @description 根据年周获取一周中的所有日期
+     * @author huangjiqing
+     * @date 2018/3/13 19:18
+     */
+    public static List<String> getDatesByYearAndWeek(Integer year, Integer week)
+    {
+        ArrayList<String> dates = new ArrayList<String>();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setFirstDayOfWeek(Calendar.MONDAY);
+        calendar.set(Calendar.WEEK_OF_YEAR, week);
+        calendar.set(Calendar.YEAR, year);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+        for (int i = 1; i < 7; i++)
+        {
+            calendar.add(Calendar.DATE, -1);
+            int cweek = calendar.get(Calendar.WEEK_OF_YEAR);
+            if (cweek != week)
+            {
+                break;
+            }
+
+        }
+
+        for (int i = 1; i <= 7; i++)
+        {
+            calendar.add(Calendar.DATE, 1);
+            Date date = calendar.getTime();
+            dates.add(sdf.format(date));
+        }
+
+        return dates;
+    }
+
+    /**
+     * @param
+     * @return
+     * @description 根据年月获取当月中的所有日期
+     * @author huangjiqing
+     * @date 2018/3/13 19:18
+     */
+    public static List<String> getDatesByYearAndMonth(Integer year, Integer month)
+    {
+        ArrayList<String> dates = new ArrayList<String>();
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(year, month - 1, 1);
+        calendar.add(Calendar.DATE, -1);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+        for (int i = 1; i < 32; i++)
+        {
+            calendar.add(Calendar.DATE, 1);
+            int cmonth = calendar.get(Calendar.MONTH) + 1;
+            if (cmonth != month)
+            {
+                break;
+            }
+            Date date = calendar.getTime();
+            dates.add(sdf.format(date));
+        }
+        return dates;
+    }
+
+    public static String getDateBeforeNowYmd(Integer dayCount)
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.DATE, dayCount);
+        date = calendar.getTime();
+        return sdf.format(date);
+    }
+
+    public static String getYmdByYmdHs(String date) throws ParseException
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss Z yyyy", Locale.UK);
+        SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
+        Date parse = sdf.parse(date);
+        return sdf2.format(parse);
     }
 
 }

@@ -73,18 +73,17 @@ public class MainPageController
         List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
         model.put("imageList", rotationList);
 
-        var news = newsCenterQueryService.selectNewsById(id);
+        List<NewsCenter> news = newsCenterQueryService.selectNewsById(id);
 
-        for (var newsCenter : news)
+        for (NewsCenter newsCenter : news)
         {
-            var length = newsCenter.getContent().length();
-            var str = newsCenter.getContent().substring(0, 100);
+            String str = newsCenter.getContent().substring(0, 100);
             newsCenter.setContent(str);
         }
 
-        var secondMenus = new ArrayList<Menu>();
+        List<Menu> secondMenus = new ArrayList<Menu>();
 
-        for (var menu : firstMenuList)
+        for (Menu menu : firstMenuList)
         {
             if (parentId.equals(menu.getId()))
             {
@@ -117,7 +116,7 @@ public class MainPageController
         model.put("imageList", rotationList);
 
         CompanyInfo companyInformation = companyInfoQueryService.selectCompanyInfoById(id);
-        var secondMenus = new ArrayList<Menu>();
+        List<Menu> secondMenus = new ArrayList<Menu>();
 
         for (Menu menu : firstMenuList)
         {
@@ -149,12 +148,12 @@ public class MainPageController
         List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
         model.put("imageList", rotationList);
 
-        for (var firstMenu : firstMenuList)
+        for (Menu firstMenu : firstMenuList)
         {
             if (parentId.equals(firstMenu.getId()))
             {
-                var secondMenus = menuQueryService.selectSonMenuByParentId(firstMenu.getId(), firstMenu.getLevel() + 1);
-                var thirdMenus = mediaQueryService.selectMediasByParentId(id);
+                List<Menu> secondMenus = menuQueryService.selectSonMenuByParentId(firstMenu.getId(), firstMenu.getLevel() + 1);
+                List<Media> thirdMenus = mediaQueryService.selectMediasByParentId(id);
 
                 model.put("secondMenus", secondMenus);
                 model.put("secondId", id);
@@ -185,14 +184,14 @@ public class MainPageController
         List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
         model.put("imageList", rotationList);
 
-        for (var firstMenu : firstMenuList)
+        for (Menu firstMenu : firstMenuList)
         {
             if (parentId.equals(firstMenu.getId()))
             {
-                var secondMenus = menuQueryService.selectSonMenuByParentId(firstMenu.getId(), firstMenu.getLevel() + 1);
-                var thirdMenus = mediaQueryService.selectMediasByParentId(secondId);
+                List<Menu> secondMenus = menuQueryService.selectSonMenuByParentId(firstMenu.getId(), firstMenu.getLevel() + 1);
+                List<Media> thirdMenus = mediaQueryService.selectMediasByParentId(secondId);
 
-                for (var thirdMenu : thirdMenus)
+                for (Media thirdMenu : thirdMenus)
                 {
                     if (mediaId.equals(thirdMenu.getMediaId()))
                     {
@@ -206,7 +205,7 @@ public class MainPageController
                                 model.put("parentId", parentId);
                                 model.put("thirdMenu", thirdMenu);
 
-                                var videoList = videoQueryService.selectAllVideos();
+                                List<Video> videoList = videoQueryService.selectAllVideos();
                                 model.put("videoList", videoList);
 
                                 result = "company_video";
@@ -221,7 +220,7 @@ public class MainPageController
                                 model.put("parentId", parentId);
                                 model.put("thirdMenu", thirdMenu);
 
-                                var musicList = musicQueryService.selectAllSongs();
+                                List<Music> musicList = musicQueryService.selectAllSongs();
                                 model.put("musicList", musicList);
 
                                 result = "container";
