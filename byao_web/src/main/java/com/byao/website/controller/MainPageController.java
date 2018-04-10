@@ -55,6 +55,19 @@ public class MainPageController
         List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
         model.put("imageList", rotationList);
 
+        List<Menu> secondMenus = menuQueryService.selectSonMenuByParentId(3, 2);
+        model.put("secondMenus", secondMenus);
+
+        for (Menu menu : secondMenus)
+        {
+            List<Media> mediaList = mediaQueryService.selectMediasByParentId(menu.getId());
+
+            for (int i = 0; i < 2; i++)
+            {
+                model.put("media" + mediaList.get(i).getMediaId(), mediaList.get(i));
+            }
+        }
+
         return "index";
     }
 
@@ -94,6 +107,7 @@ public class MainPageController
         }
 
         model.put("secondMenus", secondMenus);
+        model.put("parentId", parentId);
         model.put("newsList", news);
         model.put("secondId", id);
 
@@ -127,6 +141,8 @@ public class MainPageController
             }
         }
         model.put("secondMenus", secondMenus);
+
+        model.put("parentId", parentId);
 
         model.put("companyInformation", companyInformation);
 

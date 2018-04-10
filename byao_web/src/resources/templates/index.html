@@ -128,7 +128,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
                 <h2><span class="highlight-text">主营业务</span></h2>
 
-                <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">这个也是</p>
+                <!--<p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">这个也是</p>-->
             </div>
             <!-- Section Header End -->
 
@@ -142,10 +142,10 @@
         <div id="portfolio-filter" class="portfolio-filter-btn-group">
             <ul>
                 <li>
-                    <a href="#" data-filter=".web">影视</a>
-                    <a href="#" data-filter=".seo">音乐</a>
-                    <a href="#" data-filter=".works">慈善</a>
-                    <a href="#" data-filter=".brands">培训</a>
+                    <a th:href="#" data-filter=".web">影视</a>
+                    <a th:href="#" data-filter=".seo">音乐</a>
+                    <a th:href="#" data-filter=".works">慈善</a>
+                    <a th:href="#" data-filter=".brands">培训</a>
                 </li>
             </ul>
         </div>
@@ -156,12 +156,13 @@
 
             <!-- 这是影视类class中最后一个类是web-->
             <div class="item portfolio-item web">
-                <img th:src="@{/images/img-portfolio/portfolio1.jpg}" alt="">
+                <img th:src="${media14.images}" alt="">
                 <div class="portfolio-details-wrapper">
                     <div class="portfolio-details">
                         <div class="portfolio-meta-btn">
                             <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio1.jpg}"
+                                <li class="lighbox"><a th:href="javascript:void(0)"
+                                                       th:onclick="'javascript:showArticalPage(\''+${media14.mediaId}+'\',\''+${media14.parentId}+'\',\''+1+'\');'"
                                                        class="featured-work-img"><i class="fa fa-search-plus"></i></a>
                                 </li>
 

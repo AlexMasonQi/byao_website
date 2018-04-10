@@ -39,7 +39,9 @@
                 <!--<td class="hove"><a href="">公司介绍</a></td>-->
                 <!--<td><a href="">领导致辞</a></td>-->
                 <!--<td><a href="">组织机构</a></td>-->
-                <td><a th:text="${second.menuName}" th:href="${second.menuUrl}+'?id='+${second.id}"></a></td>
+                <td><a th:text="${second.menuName}"
+                       th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}"></a>
+                </td>
 
             </tr>
         </table>
