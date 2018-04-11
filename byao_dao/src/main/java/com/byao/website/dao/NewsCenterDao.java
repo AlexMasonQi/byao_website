@@ -10,4 +10,8 @@ import java.util.List;
 public interface NewsCenterDao
 {
     List<NewsCenter> selectNewsCenterById(@Param("id") Integer id);
+
+    NewsCenter selectNewsByNewsId(@Param("newsId") Integer newsId);
+
+    List<NewsCenter> selectthreeNews();
 }

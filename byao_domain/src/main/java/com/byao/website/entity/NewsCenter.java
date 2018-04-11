@@ -8,6 +8,8 @@ public class NewsCenter implements Serializable
 
     private Integer newsId;
 
+    private String introduction;
+
     private String content;
 
     private String imageSrc;
@@ -32,6 +34,16 @@ public class NewsCenter implements Serializable
     public void setNewsId(Integer newsId)
     {
         this.newsId = newsId;
+    }
+
+    public String getIntroduction()
+    {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction)
+    {
+        this.introduction = introduction;
     }
 
     public String getContent()
@@ -67,6 +79,6 @@ public class NewsCenter implements Serializable
     @Override
     public String toString()
     {
-        return "NewsCenter{" + "id=" + id + ", content='" + content + '\'' + ", parentId=" + parentId + '}';
+        return "NewsCenter{" + "id=" + id + ", newsId=" + newsId + ", introduction='" + introduction + '\'' + ", content='" + content + '\'' + ", imageSrc='" + imageSrc + '\'' + ", parentId=" + parentId + '}';
     }
 }

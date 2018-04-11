@@ -11,6 +11,18 @@
 	<head th:replace="common/common_css"></head>
 	<head th:replace="common/common_js"></head>
 
+	<script th:inline="javascript">
+        /*<![CDATA[*/
+
+        var contextPath = /*[[${#httpServletRequest.contextPath}]]*/'';
+
+        function showNewsPage(newsId, parentId, secondId) {
+            window.location.href = contextPath + "/showNewsPage?newsId=" + newsId + '&parentId=' + parentId + '&secondId=' + secondId;
+        }
+
+        /*]]>*/
+	</script>
+
 </head>
 
 <body>
@@ -47,67 +59,25 @@
 	</div>
 </div>
 <div class="container-fluid">
-	<div class="row" th:each="news:${newsList}" th:if="${news.id==secondId}">
-		<div class="col-md-1"></div>
-		<div class="col-md-2">
-			<img class="img-responsive img-rounded" th:src="${news.imageSrc}">
-		</div>
-		<div class="col-md-8">
-			<!--<a href=""><h4>这是标题</h4>-->
-			<p th:text="${news.content}"></p>
-		</div>
+	<div class="list-group" th:each="news:${newsList}" th:if="${news.id==secondId}">
+		<a href="javascript:void(0)"
+		   th:onclick="'javascript:showNewsPage(\''+${news.newsId}+'\',\''+${news.parentId}+'\',\''+${secondId}+'\');'"
+		   class="list-group-item list-group-item-action"><img
+				class="img-responsive img-rounded"
+				th:src="${news.imageSrc}"
+				width="180px"
+				height="120px">
+			<p th:text="${news.introduction}"></p><br>
+		</a><br>
+		<!--<div class="col-md-1"></div>-->
+		<!--<div class="col-md-2">-->
+		<!--<img class="img-responsive img-rounded" th:src="${news.imageSrc}">-->
+		<!--</div>-->
+		<!--<div class="col-md-8">-->
+		<!--&lt;!&ndash;<a href=""><h4>这是标题</h4>&ndash;&gt;-->
+		<!--<p th:text="${news.content}"></p>-->
+		<!--</div>-->
 	</div>
-	<!--<div class="row">-->
-	<!--<div class="col-md-1"></div>-->
-	<!--<div class="col-md-2">-->
-	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
-	<!--</div>-->
-	<!--<div class="col-md-7">-->
-	<!--<a href=""><h4>这是标题</h4>-->
-	<!--<p>内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！内容文字不超过185个字就行！</p></a>-->
-	<!--</div>-->
-	<!--</div>-->
-	<!---->
-	<!--<div class="row">-->
-	<!--<div class="col-md-1"></div>-->
-	<!--<div class="col-md-2">-->
-	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
-	<!--</div>-->
-	<!--<div class="col-md-7">-->
-	<!--<a href=""><h4>这是标题</h4>-->
-	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
-	<!--</div>-->
-	<!--</div>-->
-	<!--<div class="row">-->
-	<!--<div class="col-md-1"></div>-->
-	<!--<div class="col-md-2">-->
-	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
-	<!--</div>-->
-	<!--<div class="col-md-7">-->
-	<!--<a href=""><h4>这是标题</h4>-->
-	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
-	<!--</div>-->
-	<!--</div>-->
-	<!--<div class="row">-->
-	<!--<div class="col-md-1"></div>-->
-	<!--<div class="col-md-2">-->
-	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
-	<!--</div>-->
-	<!--<div class="col-md-7">-->
-	<!--<a href=""><h4>这是标题</h4>-->
-	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
-	<!--</div>-->
-	<!--</div>-->
-	<!--<div class="row">-->
-	<!--<div class="col-md-1"></div>-->
-	<!--<div class="col-md-2">-->
-	<!--<img class="img-responsive img-rounded" th:src="@{/images/slider/slider-img-1.jpg}">-->
-	<!--</div>-->
-	<!--<div class="col-md-7">-->
-	<!--<a href=""><h4>这是标题</h4>-->
-	<!--<p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p></a>-->
-	<!--</div>-->
-	<!--</div> -->
 	<nav aria-label="Page navigation" class="Page">
 	  <ul class="pagination">
 	    <li class="page-item disabled">

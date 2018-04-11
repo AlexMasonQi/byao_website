@@ -5,12 +5,43 @@
     <resultMap id="newsCenterMap" type="com.byao.website.entity.NewsCenter">
         <id column="news_id" property="newsId"/>
         <result column="id" property="id"/>
+        <result column="introduction" property="introduction"/>
         <result column="content" property="content"/>
         <result column="image_src" property="imageSrc"/>
         <result column="parent_id" property="parentId"/>
     </resultMap>
 
     <select id="selectNewsCenterById" resultMap="newsCenterMap">
-        select id,news_id,content,image_src,parent_id from company_news where id=#{id}
+        select
+            id,
+            news_id,
+            introduction,
+            content,
+            image_src,
+            parent_id
+        from company_news
+        where id = #{id}
+    </select>
+
+    <select id="selectNewsByNewsId" resultMap="newsCenterMap">
+        select
+            id,
+            news_id,
+            introduction,
+            content,
+            parent_id
+        from company_news
+        where news_id = #{newsId}
+    </select>
+
+    <select id="selectthreeNews" resultMap="newsCenterMap">
+        select
+            id,
+            news_id,
+            introduction,
+            content,
+            parent_id
+        from company_news
+        limit 0, 3
     </select>
 </mapper>

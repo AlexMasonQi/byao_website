@@ -58,15 +58,21 @@ public class MainPageController
         List<Menu> secondMenus = menuQueryService.selectSonMenuByParentId(3, 2);
         model.put("secondMenus", secondMenus);
 
-        for (Menu menu : secondMenus)
+        for (int i = 0; i < secondMenus.size(); i++)
         {
-            List<Media> mediaList = mediaQueryService.selectMediasByParentId(menu.getId());
+            List<Media> mediaList = mediaQueryService.selectMediasByParentId(secondMenus.get(i).getId());
 
-            for (int i = 0; i < 2; i++)
+            List<Media> resultMediaList = new ArrayList<>();
+
+            for (int j = 0; j < 2; j++)
             {
-                model.put("media" + mediaList.get(i).getMediaId(), mediaList.get(i));
+                resultMediaList.add(mediaList.get(j));
             }
+            model.put("medias" + i, resultMediaList);
         }
+
+        List<NewsCenter> newsList = newsCenterQueryService.selectThreeNews();
+        model.put("newsList", newsList);
 
         return "index";
     }
@@ -88,12 +94,6 @@ public class MainPageController
 
         List<NewsCenter> news = newsCenterQueryService.selectNewsById(id);
 
-        for (NewsCenter newsCenter : news)
-        {
-            String str = newsCenter.getContent().substring(0, 100);
-            newsCenter.setContent(str);
-        }
-
         List<Menu> secondMenus = new ArrayList<Menu>();
 
         for (Menu menu : firstMenuList)
@@ -112,6 +112,42 @@ public class MainPageController
         model.put("secondId", id);
 
         return "list";
+    }
+
+    @RequestMapping("/showNewsPage")
+    public String showNewsPage(Integer newsId, Integer secondId, Integer parentId, Map model)
+    {
+        List<Menu> firstMenuList = menuQueryService.selectAllFirstMenu();
+        model.put("firstMenuList", firstMenuList);
+
+        List<Menu> secondMenuList = menuQueryService.selectSecondMenu();
+        model.put("secondMenuList", secondMenuList);
+
+        BasicInfo basicInfo = basicInfoQueryService.selectBasicInfoByStatus();
+        model.put("basicInfo", basicInfo);
+
+        List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
+        model.put("imageList", rotationList);
+
+        NewsCenter newsInfo = newsCenterQueryService.selectNewsByNewsId(newsId);
+        model.put("newsInfo", newsInfo);
+        model.put("parentId", parentId);
+        model.put("secondId", secondId);
+
+        List<Menu> secondMenus = new ArrayList<Menu>();
+
+        for (Menu menu : firstMenuList)
+        {
+            if (parentId.equals(menu.getId()))
+            {
+                secondMenus = menuQueryService.selectSonMenuByParentId(menu.getId(), menu.getLevel() + 1);
+                break;
+            }
+        }
+
+        model.put("secondMenus", secondMenus);
+
+        return "news";
     }
 
     @RequestMapping(value = "/companyInfo", method = RequestMethod.GET)

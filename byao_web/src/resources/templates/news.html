@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="Author" content="">
+    <title>铂钥天下</title>
+    <head th:replace="common/common_css"></head>
+
+    <head th:replace="common/common_js"></head>
+</head>
+
+<body>
+<!-- Header End -->
+<!-- Navigation Menu start-->
+
+
+<!-- Header End -->
+<header th:replace="common/common_head"></header>
+<!-- Header End -->
+
+<br/>
+<p id="position" th:each="first:${firstMenuList}" th:if="${parentId==first.id}">当前位置：主页 --> <span
+        th:text="${first.menuName}"></span>-->
+    <!--<span th:each="second:${secondMenus}" th:if="${second.id==news.id}"><span-->
+    <!--th:text="${second.menuName}"></span></span>-->
+    <span th:each="second:${secondMenus}"><span th:if="${second.id==secondId}"><span
+            th:text="${second.menuName}"></span></span></span>
+</p>
+<hr/>
+<!-- position End  -->
+
+<div class="backline" id="backline">
+    <div class="sec">
+        <table>
+            <tr th:each="second:${secondMenus}">
+                <!--<td class="hove"><a href="">公司新闻</a></td>-->
+                <!--<td><a href="">特别关注</a></td>-->
+                <td><a th:text="${second.menuName}"
+                       th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="mainContainer" id="mainContainer">
+    <!-- 文字或者图片用这个 -->
+    <p th:text="${newsInfo.content}"></p>
+
+    <div style="clear: both;"></div>
+</div>
+
+<footer th:replace="common/common_foot"></footer>
+
+
+<!-- The JavaScript -->
+
+
+<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+<script th:src="@{/js/modernizr.min.js}"></script>
+<script th:src="@{/js/jquery.scrollUp.min.js}"></script>
+<script th:src="@{/js/isotope.pkgd.min.js}"></script>
+<script th:src="@{/js/jquery.stellar.min.js}"></script>
+<script th:src="@{/js/wow.min.js}"></script>
+<script th:src="@{/js/jquery.nav.js}"></script>
+<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+<script th:src="@{/js/jquery.sliderPro.min.js}"></script>
+<script th:src="@{/js/owl.carousel.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+
+
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/music.js}"></script>
+</body>
+</html>

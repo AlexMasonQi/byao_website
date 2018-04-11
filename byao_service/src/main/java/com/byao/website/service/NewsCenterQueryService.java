@@ -17,4 +17,14 @@ public class NewsCenterQueryService
     {
         return newsCenterDao.selectNewsCenterById(id);
     }
+
+    public NewsCenter selectNewsByNewsId(Integer newsId)
+    {
+        return newsCenterDao.selectNewsByNewsId(newsId);
+    }
+
+    public List<NewsCenter> selectThreeNews()
+    {
+        return newsCenterDao.selectthreeNews();
+    }
 }

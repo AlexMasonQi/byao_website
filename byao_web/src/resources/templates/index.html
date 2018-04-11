@@ -86,8 +86,8 @@
             <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
                 <h2><span class="highlight-text">新闻中心</span></h2>
 
-                <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
-                    然后到这里就不行了，所以我认为应该给这个简介添加一个独立的数据</p>
+                <!--<p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">-->
+                <!--然后到这里就不行了，所以我认为应该给这个简介添加一个独立的数据</p>-->
             </div>
             <!-- Section Header End -->
 
@@ -97,22 +97,9 @@
 
             <div class="col-md-6 col-sm-6 col-xs-12 customized-text wow fadeInDown black-ed">
                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum ipsum.  lobcaecati ea maiores totam nostrum, ad iure rerum quas harum ipsum. Rem ea ducimus quos quae quo.</p> -->
-                <div class="row">
+                <div class="row" th:each="news:${newsList}">
                     <div class="col-md-11">
-                        <strong>标题</strong>
-                        <p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-11">
-                        <strong>标题</strong>
-                        <p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-11">
-                        <strong>标题</strong>
-                        <p>内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！内容！</p>
+                        <p th:text="${news.introduction}"></p>
                     </div>
                 </div>
             </div>
@@ -142,10 +129,10 @@
         <div id="portfolio-filter" class="portfolio-filter-btn-group">
             <ul>
                 <li>
-                    <a th:href="#" data-filter=".web">影视</a>
-                    <a th:href="#" data-filter=".seo">音乐</a>
-                    <a th:href="#" data-filter=".works">慈善</a>
-                    <a th:href="#" data-filter=".brands">培训</a>
+                    <a href="#" data-filter=".web">影视</a>
+                    <a href="#" data-filter=".seo">音乐</a>
+                    <a href="#" data-filter=".works">慈善</a>
+                    <a href="#" data-filter=".brands">培训</a>
                 </li>
             </ul>
         </div>
@@ -155,30 +142,13 @@
             <!-- 对接时请注意，这里一共有四个分类：影视音乐慈善培训，每一块都对应了两项，不一定要两项，这个我希望后台对接时，可以由用户自己定义显示的数量，四个分类主要区别在于下边一行div的class最后一个类名 -->
 
             <!-- 这是影视类class中最后一个类是web-->
-            <div class="item portfolio-item web">
-                <img th:src="${media14.images}" alt="">
+            <div class="item portfolio-item web" th:each="media:${medias0}">
+                <img th:src="${media.images}" alt="">
                 <div class="portfolio-details-wrapper">
                     <div class="portfolio-details">
                         <div class="portfolio-meta-btn">
                             <ul class="work-meta">
-                                <li class="lighbox"><a th:href="javascript:void(0)"
-                                                       th:onclick="'javascript:showArticalPage(\''+${media14.mediaId}+'\',\''+${media14.parentId}+'\',\''+1+'\');'"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item portfolio-item web">
-                <img th:src="@{/images/img-portfolio/portfolio1.jpg}" alt="">
-                <div class="portfolio-details-wrapper">
-                    <div class="portfolio-details">
-                        <div class="portfolio-meta-btn">
-                            <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio1.jpg}"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                <li class="lighbox"><a href="javascript:void(0)" class="featured-work-img"></a>
                                 </li>
 
                             </ul>
@@ -189,28 +159,13 @@
             <!-- 影视类结束-->
 
             <!--这是音乐类class中最后一个类是seo-->
-            <div class="item portfolio-item seo">
-                <img th:src="@{/images/img-portfolio/portfolio3.jpg}" alt="">
+            <div class="item portfolio-item seo" th:each="media:${medias1}">
+                <img th:src="${media.images}" alt="">
                 <div class="portfolio-details-wrapper">
                     <div class="portfolio-details">
                         <div class="portfolio-meta-btn">
                             <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio3.jpg}"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item portfolio-item seo">
-                <img th:src="@{/images/img-portfolio/portfolio3.jpg}" alt="">
-                <div class="portfolio-details-wrapper">
-                    <div class="portfolio-details">
-                        <div class="portfolio-meta-btn">
-                            <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio3.jpg}"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                <li class="lighbox"><a href="javascript:void(0)" class="featured-work-img"></a>
                                 </li>
                             </ul>
                         </div>
@@ -220,28 +175,13 @@
             <!--音乐类结束-->
 
             <!--这是慈善类，class中最后一个类名是works-->
-            <div class="item portfolio-item works">
-                <img th:src="@{/images/img-portfolio/portfolio4.jpg}" alt="">
+            <div class="item portfolio-item works" th:each="media:${medias2}">
+                <img th:src="${media.images}" alt="">
                 <div class="portfolio-details-wrapper">
                     <div class="portfolio-details">
                         <div class="portfolio-meta-btn">
                             <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio5.jpg}"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item portfolio-item works">
-                <img th:src="@{/images/img-portfolio/portfolio4.jpg}" alt="">
-                <div class="portfolio-details-wrapper">
-                    <div class="portfolio-details">
-                        <div class="portfolio-meta-btn">
-                            <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio5.jpg}"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                <li class="lighbox"><a href="javascript:void(0)" class="featured-work-img"></a>
                                 </li>
                             </ul>
                         </div>
@@ -252,28 +192,13 @@
             <!--慈善结束-->
 
             <!--这是培训，class中最后一个类名是brands-->
-            <div class="item portfolio-item brands">
-                <img th:src="@{/images/img-portfolio/portfolio5.jpg}" alt="">
+            <div class="item portfolio-item brands" th:each="media:${medias3}">
+                <img th:src="${media.images}" alt="">
                 <div class="portfolio-details-wrapper">
                     <div class="portfolio-details">
                         <div class="portfolio-meta-btn">
                             <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio7.jpg}"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item portfolio-item brands">
-                <img th:src="@{/images/img-portfolio/portfolio5.jpg}" alt="">
-                <div class="portfolio-details-wrapper">
-                    <div class="portfolio-details">
-                        <div class="portfolio-meta-btn">
-                            <ul class="work-meta">
-                                <li class="lighbox"><a th:href="@{/images/img-portfolio/portfolio7.jpg}"
-                                                       class="featured-work-img"><i class="fa fa-search-plus"></i></a>
+                                <li class="lighbox"><a href="javascript:void(0)" class="featured-work-img"></a>
                                 </li>
                             </ul>
                         </div>
@@ -281,7 +206,6 @@
                 </div>
             </div>
             <!--培训结束-->
-
         </div>
     </div>
 </section>
