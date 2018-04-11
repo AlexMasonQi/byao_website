@@ -58,13 +58,13 @@ public class MainPageController
         List<Menu> secondMenus = menuQueryService.selectSonMenuByParentId(3, 2);
         model.put("secondMenus", secondMenus);
 
-        for (int i = 0; i < secondMenus.size(); i++)
+        for (var i = 0; i < secondMenus.size(); i++)
         {
             List<Media> mediaList = mediaQueryService.selectMediasByParentId(secondMenus.get(i).getId());
 
             List<Media> resultMediaList = new ArrayList<>();
 
-            for (int j = 0; j < 2; j++)
+            for (var j = 0; j < 2; j++)
             {
                 resultMediaList.add(mediaList.get(j));
             }
@@ -96,7 +96,7 @@ public class MainPageController
 
         List<Menu> secondMenus = new ArrayList<Menu>();
 
-        for (Menu menu : firstMenuList)
+        for (var menu : firstMenuList)
         {
             if (parentId.equals(menu.getId()))
             {
@@ -136,7 +136,7 @@ public class MainPageController
 
         List<Menu> secondMenus = new ArrayList<Menu>();
 
-        for (Menu menu : firstMenuList)
+        for (var menu : firstMenuList)
         {
             if (parentId.equals(menu.getId()))
             {
@@ -168,7 +168,7 @@ public class MainPageController
         CompanyInfo companyInformation = companyInfoQueryService.selectCompanyInfoById(id);
         List<Menu> secondMenus = new ArrayList<Menu>();
 
-        for (Menu menu : firstMenuList)
+        for (var menu : firstMenuList)
         {
             if (parentId.equals(menu.getId()))
             {
@@ -200,7 +200,7 @@ public class MainPageController
         List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
         model.put("imageList", rotationList);
 
-        for (Menu firstMenu : firstMenuList)
+        for (var firstMenu : firstMenuList)
         {
             if (parentId.equals(firstMenu.getId()))
             {
@@ -236,14 +236,14 @@ public class MainPageController
         List<Rotation> rotationList = menuQueryService.selectImagesByCount(menuQueryService.selectImagesCount());
         model.put("imageList", rotationList);
 
-        for (Menu firstMenu : firstMenuList)
+        for (var firstMenu : firstMenuList)
         {
             if (parentId.equals(firstMenu.getId()))
             {
                 List<Menu> secondMenus = menuQueryService.selectSonMenuByParentId(firstMenu.getId(), firstMenu.getLevel() + 1);
                 List<Media> thirdMenus = mediaQueryService.selectMediasByParentId(secondId);
 
-                for (Media thirdMenu : thirdMenus)
+                for (var thirdMenu : thirdMenus)
                 {
                     if (mediaId.equals(thirdMenu.getMediaId()))
                     {

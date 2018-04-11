@@ -10,17 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2af510-20e6-4f1e-81e3-3e983c032e71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/NewsCenterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/NewsCenterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/NewsCenterDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/NewsCenterDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/NewsCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/NewsCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/NewsCenterQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/NewsCenterQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_dao/byao_dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_dao/byao_dao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_domain/byao_domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_domain/byao_domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_service/byao_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_service/byao_service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_util/byao_util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_util/byao_util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_web/byao_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/byao_web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/src/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/src/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byao_web/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/byao_web/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byao_website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/byao_website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,12 +40,57 @@
     <favorites_list name="byao_website" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MainPageController.java" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_dao/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-210">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_domain/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_web/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="27" />
+            <state relative-caret-position="139">
+              <caret line="310" column="21" lean-forward="true" selection-start-line="310" selection-start-column="21" selection-end-line="310" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,62 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/article.html">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/byao_util/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="49" column="42" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsCenter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/NewsCenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-              <folding>
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#707#708#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsCenterDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/NewsCenterDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="media.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/media.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-735">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/byao_web/src/resources/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+            <state relative-caret-position="273">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -179,7 +173,6 @@
         <option value="$PROJECT_DIR$/byao_util/pom.xml" />
         <option value="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/VideoQueryService.java" />
         <option value="$PROJECT_DIR$/byao_web/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/byao_web/src/resources/logback.xml" />
         <option value="$PROJECT_DIR$/byao_web/src/resources/templates/companyInfo.html" />
         <option value="$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/NewsCenter.java" />
@@ -189,8 +182,9 @@
         <option value="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/mapper/NewsCenterDao.xml" />
         <option value="$PROJECT_DIR$/byao_dao/src/main/java/com/byao/website/dao/NewsCenterDao.java" />
         <option value="$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/NewsCenterQueryService.java" />
-        <option value="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java" />
         <option value="$PROJECT_DIR$/byao_web/src/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java" />
       </list>
     </option>
   </component>
@@ -271,6 +265,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -416,6 +412,11 @@
             <path>
               <item name="byao_website" type="b2602c69:ProjectViewProjectNode" />
               <item name="byao_website" type="462c0819:PsiDirectoryNode" />
+              <item name="byao_util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="byao_website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="byao_website" type="462c0819:PsiDirectoryNode" />
               <item name="byao_web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -521,8 +522,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -532,9 +531,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Web_App" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -556,124 +555,6 @@
       <recent name="D:\Java_work\byao_website\byao_web\src\resources\static\js" />
       <recent name="D:\Java_work\byao_website\byao_web\src\resources\templates" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/resources/templates/companyInfo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/resources/templates/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/resources/templates/list.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/resources/static/music/Avril Lavigne - Innocence.lrc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/resources/static/music/Avril Lavigne - Innocence.mp3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/resources/static/music/Kelly Clarkson - Because Of You.lrc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/byao_web/src/resources/static/music/Kelly Clarkson - Because Of You.mp3</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -776,7 +657,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="Bytx_App" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+    <configuration name="Bytx_App" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.7" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="10">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -849,7 +730,7 @@
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.7" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
       <server-settings>
@@ -965,6 +846,7 @@
       <workItem from="1523105744096" duration="5124000" />
       <workItem from="1523150989029" duration="22404000" />
       <workItem from="1523319529474" duration="27989000" />
+      <workItem from="1523432337649" duration="1462000" />
     </task>
     <task id="LOCAL-00001" summary="1.对所有html页面进行了一些小小的修改，主要是添加了Thymeleaf模板引擎的一些元素。&#10;2.TestPage是测试页面，专供测试一些功能，对应的TestController也是一个测试的Controller。">
       <created>1521306478444</created>
@@ -1008,19 +890,26 @@
       <option name="project" value="LOCAL" />
       <updated>1523268554668</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="主页对接和新闻跳转">
+      <created>1523422751649</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523422751650</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215897000" />
+    <option name="totallyTimeSpent" value="218225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5070694" side_tool="true" weight="0.32684284" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32962447" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5044987" side_tool="true" weight="0.31293464" />
+      <window_info anchor="bottom" id="Application Servers" order="10" weight="0.32962447" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32969153" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
@@ -1029,54 +918,28 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4919571" visible="true" weight="0.30598053" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4919571" visible="true" weight="0.3463143" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32684284" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.329429" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4929306" weight="0.32684284" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32962447" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49550128" weight="0.31293464" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2377892" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5044987" side_tool="true" weight="0.31293464" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2377892" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.329429" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4919571" visible="true" weight="0.3504868" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49550128" weight="0.31293464" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32969153" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32962447" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4914071" weight="0.32796487" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="10" weight="0.32962447" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
-      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32962447" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49550128" weight="0.31293464" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24100257" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1129,7 +992,8 @@
     <MESSAGE value="导航栏添加链接" />
     <MESSAGE value="添加视频播放功能" />
     <MESSAGE value="修改maven-compiler-plugin版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改maven-compiler-plugin版本" />
+    <MESSAGE value="主页对接和新闻跳转" />
+    <option name="LAST_COMMIT_MESSAGE" value="主页对接和新闻跳转" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1397,34 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/byao_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_domain/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_util/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/byao_service/src/main/java/com/byao/website/service/VideoQueryService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -1457,20 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2657">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1514,15 +1336,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/byao_web/src/resources/static/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/byao_web/src/resources/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/common/common_css.html">
@@ -1594,16 +1407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/byao_web/src/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1613,13 +1416,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/byao_domain/src/main/java/com/byao/website/entity/NewsCenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="189">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#612#613#0" expanded="true" />
             <element signature="e#647#648#0" expanded="true" />
             <element signature="e#707#708#0" expanded="true" />
             <element signature="e#755#756#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_util/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/byao_web/src/main/java/com/byao/website/controller/MainPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="310" column="21" lean-forward="true" selection-start-line="310" selection-start-column="21" selection-end-line="310" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1666,7 +1521,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
