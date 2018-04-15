@@ -4,6 +4,7 @@
 <mapper namespace="com.byao.website.dao.BasicInfoDao">
     <resultMap id="basicInfoMap" type="com.byao.website.entity.BasicInfo">
         <id column="id" property="id"/>
+        <result column="basic_name" property="basicName"/>
         <result column="basic_logo" property="basicLogo"/>
         <result column="basic_qrcode" property="basicQrcode"/>
         <result column="basic_address" property="basicAddress"/>
@@ -11,19 +12,24 @@
         <result column="basic_email" property="basicEmail"/>
         <result column="basic_record" property="basicRecord"/>
         <result column="status" property="status"/>
+        <result column="support" property="support"/>
+        <result column="descript" property="descript"/>
     </resultMap>
 
     <!--查询启用状态的公司信息-->
     <select id="selectBasicInfoByStatus" resultMap="basicInfoMap">
         select
             id,
+            basic_name,
             basic_logo,
             basic_qrcode,
             basic_address,
             basic_phone,
             basic_email,
             basic_record,
-            status
+            status,
+            support,
+            descript
         from basic_info
         where
             status = 1
