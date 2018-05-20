@@ -11,6 +11,7 @@
         <result column="music_lrc_src" property="musicLrcPath"/>
         <result column="music_images" property="musicImagesPath"/>
         <result column="music_images_count" property="musicImagesCount"/>
+        <result column="status" property="status"/>
     </resultMap>
 
     <!--根据ID查询歌曲-->

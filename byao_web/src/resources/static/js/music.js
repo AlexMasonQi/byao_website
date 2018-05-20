@@ -28,7 +28,7 @@ $(function () {
         $(this).siblings().css("backgroundColor", "transparent");
         //获取点击所在数据库索引
         var id = $(this).children(".id").html();
-        console.log(id);
+        // console.log(id);
         //异步请求数据（图片地址，图片数量，播放地址，歌词）
         $.ajax({
                    type: "post",
@@ -38,14 +38,17 @@ $(function () {
                        "id": id
                    },
                    success: function (data) {
+                    player.src = data.musicPath;
+                    //启动播放器
+                    player.play();
                        //解析歌词
-                       showLrc(data.musicLrcPath);
+                    //    showLrc(data.musicLrcPath);
                        //设置背景图片，并动态切换
                        showimage(data.musicImagesPath, data.musicImagesCount);
                        //设置播放源
-                       player.src = data.musicPath;
-                       //启动播放器
-                       player.play();
+                    //    player.src = data.musicPath;
+                    //    //启动播放器
+                    //    player.play();
                        player.volume = 0.5;
                        //结束时间，进度条位置
                        getTime();
@@ -184,13 +187,38 @@ $(function () {
     }
 
     //渲染歌词面板
-    function showLrc(lrc) {
+    function showLrc(lrcs) {
         $(".lrc").empty();
+
         let str = "";
         lrcObj = {};
-        var htmlobj = $.ajax({url: lrc, async: false});
+        // var htmlobj = $.ajax({url: lrcs, async: false});
+        var htmlobj = $.ajax({
+            url: lrcs,
+            dataType: 'jsonp',
+            success: function (json) {
+                console.log(json)
+            },
+            error: function (err) {
+                console.log(err)
+            }
+
+        });
+        // var htmlobj = $.ajax({
+        //     url: "http://47.104.142.179:8080/upload/music/lrc/ajaxlrc.js",
+        //     dataType: 'jsonp',
+        //     success: function (json) {
+        //         console.log(json)
+        //     },
+        //     error: function (err) {
+        //         console.log(err)
+        //     }
+
+        // });
+
         //htmlobj.responseText 歌词内容在这里
         var lrc = htmlobj.responseText;
+        console.log(lrc);
         var lyrics = lrc.split("\n");
         for (var i = 0; i < lyrics.length; i++) {
             var lyric = decodeURIComponent(lyrics[i]);

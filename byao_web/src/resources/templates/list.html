@@ -48,19 +48,20 @@
 <div class="backline">
 	<div class="sec">
 		<table>
-			<tr th:each="second:${secondMenus}">
-				<!--<td class="hove"><a href="">公司新闻</a></td>-->
-				<!--<td><a href="">特别关注</a></td>-->
-				<td><a th:text="${second.menuName}"
-					   th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}"></a>
-				</td>
-			</tr>
+				<tr>
+						<td class="hove" th:each="second:${secondMenus}" th:class="${second.id==secondId}? 'hove':''">
+								
+							<a th:text="${second.menuName}"
+							   th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}">
+							</a>
+						</td>
+					</tr>
 		</table>
 	</div>
 </div>
 <div class="container-fluid">
-	<div class="list-group" th:each="news:${newsList}" th:if="${news.id==secondId}">
-		<a href="javascript:void(0)"
+	<div class="list-group row" th:each="news:${newsList}" th:if="${news.id==secondId}" style="margin-top: 15px;">
+		<!-- <a href="javascript:void(0)"
 		   th:onclick="'javascript:showNewsPage(\''+${news.newsId}+'\',\''+${news.parentId}+'\',\''+${secondId}+'\');'"
 		   class="list-group-item list-group-item-action"><img
 				class="img-responsive img-rounded"
@@ -68,15 +69,18 @@
 				width="180px"
 				height="120px">
 			<p th:text="${news.introduction}"></p><br>
-		</a><br>
-		<!--<div class="col-md-1"></div>-->
-		<!--<div class="col-md-2">-->
-		<!--<img class="img-responsive img-rounded" th:src="${news.imageSrc}">-->
-		<!--</div>-->
-		<!--<div class="col-md-8">-->
-		<!--&lt;!&ndash;<a href=""><h4>这是标题</h4>&ndash;&gt;-->
-		<!--<p th:text="${news.content}"></p>-->
-		<!--</div>-->
+		</a><br> -->
+		<div class="col-md-1"></div>
+		<div class="col-md-2">
+			<img class="img-responsive img-rounded" th:src="${news.imageSrc}">
+		</div>
+		<div class="col-md-8">
+			<a href="javascript:void(0)"
+			th:onclick="'javascript:showNewsPage(\''+${news.newsId}+'\',\''+${news.parentId}+'\',\''+${secondId}+'\');'">
+				<h4>这是标题</h4>
+				<p th:text="${news.introduction}"></p>
+			</a>
+		</div>
 	</div>
 	<nav aria-label="Page navigation" class="Page">
 	  <ul class="pagination">

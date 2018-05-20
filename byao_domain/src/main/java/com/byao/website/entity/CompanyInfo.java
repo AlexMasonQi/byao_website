@@ -8,6 +8,8 @@ public class CompanyInfo implements Serializable
 
     private String content;
 
+    private String menuName;
+
     private Integer parentId;
 
     public Integer getId()
@@ -30,6 +32,16 @@ public class CompanyInfo implements Serializable
         this.content = content;
     }
 
+    public String getMenuName()
+    {
+        return menuName;
+    }
+
+    public void setMenuName(String menuName)
+    {
+        this.menuName = menuName;
+    }
+
     public Integer getParentId()
     {
         return parentId;
@@ -43,6 +55,6 @@ public class CompanyInfo implements Serializable
     @Override
     public String toString()
     {
-        return "CompanyInfo{" + "id=" + id + ", content='" + content + '\'' + ", parentId=" + parentId + '}';
+        return "CompanyInfo{" + "id=" + id + ", content='" + content + '\'' + ", menuName='" + menuName + '\'' + ", parentId=" + parentId + '}';
     }
 }

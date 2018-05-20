@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="Author" content="">
-    <title>Home</title>
+    <title>Home</title> 
     <head th:replace="common/common_css"></head>
     <head th:replace="common/common_js"></head>
 </head>
@@ -31,14 +31,14 @@
 <div class="backline" id="backline">
     <div class="sec">
         <table>
-            <tr th:each="second:${secondMenus}">
+            <tr>
 
-                <!--<td class="hove"><a href="">公司介绍</a></td>-->
-                <!--<td><a href="">领导致辞</a></td>-->
-                <!--<td><a href="">组织机构</a></td>-->
-                <td><a th:text="${second.menuName}"
-                       th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}"></a>
-                </td>
+                    <td class="hove" th:each="second:${secondMenus}" th:class="${second.id==secondId}? 'hove':''">
+								
+							<a th:text="${second.menuName}"
+							   th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}">
+							</a>
+						</td>
 
             </tr>
         </table>
@@ -47,11 +47,14 @@
 <div class="mainContainer" id="mainContainer">
 
     <div class="container video">
-        <div class="row" onselectstart="return false;">
+        <div class="row addstyle" onselectstart="return false;">
             <div class="col-sm-4 col-xs-12  music-list">
                 <div class="panel panel-default bootstraPanel">
                     <div class="panel-heading taggerTitle">
                         播放列表
+                        <!-- <span class="checkBox">
+								<i class="arrow_carrot-2left"></i> 
+							</span> -->
                     </div>
                     <div class="panel-body test">
                         <table class="table table-hover">
@@ -63,13 +66,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-7 col-xs-11 hidden-xs animatevideo">
+            <div class="col-sm-8 col-xs-11 hidden-xs animatevideo">
                 <div class="panel panel-default animatevideo">
                     <div class="panel-body animatevideo">
                         <div class="videoinfo">
-                            <button type="button" class="btn btn-success videobtn">立即播放</button>
-                            <div class="videoajaxinfo">
-                            </div>
+                                <div class="videoajaxinfo">
+                                </div>
+                                <div class="videobtnbox">
+                                    <button type="button" class="btn btn-success videobtn">立即播放</button>
+                                </div>
+                            
                         </div>
                         <div class="videosoure animatevideo">
                             <div class="embed-responsive embed-responsive-16by9 animatevideo">

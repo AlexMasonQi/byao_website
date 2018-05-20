@@ -11,7 +11,7 @@ $(function () {
 
         $(".videosoure").css("display", "none");
 
-        $.ajax({
+        $.ajax({ 
                    type: "post",
                    dataType: "json",
                    url: "/playVideo",
@@ -25,7 +25,7 @@ $(function () {
                    }
                });
         $(".videobtn").click(function () {
-            $(this).parent().css("display", "none");
+            $(this).parent().parent().css("display", "none");
             $(".embed-responsive-item").attr("src", src);
             $(".videosoure").css("display", "block");
         });

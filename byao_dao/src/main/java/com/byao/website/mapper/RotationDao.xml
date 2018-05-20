@@ -8,6 +8,7 @@
         <result column="description" property="description"/>
         <result column="associate_description" property="associateDescription"/>
         <result column="image_count" property="imageCount"/>
+        <result column="status" property="status"/>
     </resultMap>
 
     <select id="selectImagesCount" resultType="java.lang.Integer">
@@ -22,6 +23,5 @@
             description,
             associate_description
         from company_rotation
-        where image_count = #{count}
     </select>
 </mapper>

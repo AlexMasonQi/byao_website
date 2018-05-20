@@ -51,6 +51,6 @@ public class MenuQueryService
 
     public List<Rotation> selectImagesByCount(Integer count)
     {
-        return rotationDao.selectImageRotationByCount(count);
+        return rotationDao.selectImageRotationByCount();
     }
 }

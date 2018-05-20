@@ -9,6 +9,7 @@ public class Rotation implements Serializable
     private String description;
     private String associateDescription;
     private Integer imageCount;
+    private Integer status;
 
     public Integer getId()
     {
@@ -58,6 +59,16 @@ public class Rotation implements Serializable
     public void setImageCount(Integer imageCount)
     {
         this.imageCount = imageCount;
+    }
+
+    public Integer getStatus()
+    {
+        return status;
+    }
+
+    public void setStatus(Integer status)
+    {
+        this.status = status;
     }
 
     @Override

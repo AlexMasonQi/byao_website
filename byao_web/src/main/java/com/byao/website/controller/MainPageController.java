@@ -2,12 +2,16 @@ package com.byao.website.controller;
 
 import com.byao.website.entity.*;
 import com.byao.website.service.*;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,7 +41,7 @@ public class MainPageController
     @Autowired
     private VideoQueryService videoQueryService;
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String gotoMainPage(Map model)
     {
         List<Menu> firstMenuList = menuQueryService.selectAllFirstMenu();
@@ -301,12 +305,23 @@ public class MainPageController
 
     @RequestMapping("/play")
     @ResponseBody
+    @CrossOrigin
     public Music playSongs(Integer id)
     {
         Music music = musicQueryService.selectSongsById(id);
 
         return music;
     }
+
+//    @RequestMapping("/readLrc")
+//    @ResponseBody
+//    public List<String> readLrc(String fileUrl) throws IOException
+//    {
+//        List<String> lrcList = new ArrayList<>();
+//        lrcList = FileUtils.readLines(new File(fileUrl), "utf-8");
+//
+//        return lrcList;
+//    }
 
     @RequestMapping("/playVideo")
     @ResponseBody

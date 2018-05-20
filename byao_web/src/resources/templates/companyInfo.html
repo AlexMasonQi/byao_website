@@ -34,16 +34,16 @@
 <div class="backline" id="backline">
     <div class="sec">
         <table>
-            <tr th:each="second:${secondMenus}">
+                <tr>
 
-                <!--<td class="hove"><a href="">公司介绍</a></td>-->
-                <!--<td><a href="">领导致辞</a></td>-->
-                <!--<td><a href="">组织机构</a></td>-->
-                <td><a th:text="${second.menuName}"
-                       th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}"></a>
-                </td>
-
-            </tr>
+                        <td class="hove" th:each="second:${secondMenus}" th:class="${second.id==secondId}? 'hove':''">
+								
+                                <a th:text="${second.menuName}"
+                                   th:href="${second.menuUrl}+'?id='+${second.id}+'&parentId='+${parentId}">
+                                </a>
+                            </td>
+        
+                    </tr>
         </table>
     </div>
 </div>

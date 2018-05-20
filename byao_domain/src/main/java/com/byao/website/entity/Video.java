@@ -8,6 +8,7 @@ public class Video implements Serializable
     private String videoPath;
     private String videoTitle;
     private String videoContent;
+    private Integer status;
 
     public Integer getId()
     {
@@ -47,6 +48,16 @@ public class Video implements Serializable
     public void setVideoContent(String videoContent)
     {
         this.videoContent = videoContent;
+    }
+
+    public Integer getStatus()
+    {
+        return status;
+    }
+
+    public void setStatus(Integer status)
+    {
+        this.status = status;
     }
 
     @Override

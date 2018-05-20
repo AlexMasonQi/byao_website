@@ -42,14 +42,14 @@
                 ☰
             </button>
 
-            <a class="navbar-brand page-scroll" th:href="@{/index}">
+            <a class="navbar-brand page-scroll" th:href="@{/}">
                 <img th:src="@{/logo.png}"/>
                 铂钥天下
             </a>
             <div class="collapse navbar-toggleable-sm " id="collapsingNavbar">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a th:href="@{/index}">主页</a>
+                        <a th:href="@{/}">主页</a>
                     </li>
                     <li class="dropdown" th:each="first:${firstMenuList}">
                         <a th:text="${first.menuName}" class="first-menu" href="javascript:void(0)"></a>

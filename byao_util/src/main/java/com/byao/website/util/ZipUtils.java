@@ -1,10 +1,13 @@
 package com.byao.website.util;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipFile;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.zip.GZIPInputStream;
 
 public abstract class ZipUtils
@@ -159,9 +162,9 @@ public abstract class ZipUtils
     /**
      * @param args
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
-
+        
     }
 
 }
