@@ -78,6 +78,9 @@ public class MainPageController
         List<NewsCenter> newsList = newsCenterQueryService.selectThreeNews();
         model.put("newsList", newsList);
 
+        List<CompanyInfo> infoList = companyInfoQueryService.selectAllCompanyInfo();
+        model.put("infoList", infoList);
+
         return "index";
     }
 

@@ -12,4 +12,13 @@
     <select id="selectCompanyInfoById" resultMap="companyInfoMap">
         select id,parent_id,content from company_info where id=#{id}
     </select>
+
+    <select id="selectAllCompanyInfo" resultMap="companyInfoMap">
+        select
+            id,
+            menu_name,
+            content,
+            parent_id
+        from company_info
+    </select>
 </mapper>

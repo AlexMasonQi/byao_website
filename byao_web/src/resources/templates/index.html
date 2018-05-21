@@ -42,36 +42,16 @@
 
             <div class="our-services">
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center">
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center" th:each="info:${infoList}">
                         <div class="service-box">
                             <div class="icon">
-                                <a href=""><i class=" icon_adjust-horiz "></i>
-                                    <h3>公司介绍</h3></a>
+                                <a th:href="'/companyInfo'+'?id='+${info.id}+'&parentId='+${info.parentId}"><i
+                                        class=" icon_adjust-horiz "></i>
+                                    <h3 th:text="${info.menuName}"></h3></a>
                             </div>
-                            <p>概况，后台可取公司介绍里的前几个字符串就行</p>
+                            <p th:text="${#strings.substring(info.content,0,10)}+'...'"></p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-                        <div class="service-box">
-                            <div class="icon">
-                                <a href=""><i class=" icon_documents_alt"></i>
-                                    <h3>领导致辞</h3></a>
-                            </div>
-
-                            <p>概况，取领导致辞里前几个字符串就可以</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-                        <div class="service-box">
-                            <div class="icon">
-                                <a href=""><i class="icon_flowchart"></i>
-                                    <h3>组织机构</h3></a>
-                            </div>
-
-                            <p>同样取前几个字符串可以</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
