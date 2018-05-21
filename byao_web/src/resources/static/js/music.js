@@ -42,13 +42,14 @@ $(function () {
                     //启动播放器
                     player.play();
                        //解析歌词
-                    //    showLrc(data.musicLrcPath);
+                       console.log(data.musicLrc);
+                       showLrc(data.musicLrc);
                        //设置背景图片，并动态切换
                        showimage(data.musicImagesPath, data.musicImagesCount);
                        //设置播放源
-                    //    player.src = data.musicPath;
-                    //    //启动播放器
-                    //    player.play();
+                       player.src = data.musicPath;
+                       //启动播放器
+                       player.play();
                        player.volume = 0.5;
                        //结束时间，进度条位置
                        getTime();

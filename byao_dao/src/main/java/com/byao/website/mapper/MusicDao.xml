@@ -8,7 +8,7 @@
         <result column="music_name" property="musicName"/>
         <result column="music_singer" property="musicSinger"/>
         <result column="music_time" property="musicTime"/>
-        <result column="music_lrc_src" property="musicLrcPath"/>
+        <result column="music_lrc" property="musicLrc"/>
         <result column="music_images" property="musicImagesPath"/>
         <result column="music_images_count" property="musicImagesCount"/>
         <result column="status" property="status"/>
@@ -16,11 +16,30 @@
 
     <!--根据ID查询歌曲-->
     <select id="selectSongsById" resultMap="musicMap">
-        select id,music_src,music_name,music_singer,music_time,music_lrc_src,music_images,music_images_count from company_music where id=#{id}
+        select
+            id,
+            music_src,
+            music_name,
+            music_singer,
+            music_time,
+            music_lrc,
+            music_images,
+            music_images_count
+        from company_music
+        where id = #{id}
     </select>
 
     <!--查询所有歌曲-->
     <select id="selectAllSongs" resultMap="musicMap">
-        select id,music_src,music_name,music_singer,music_time,music_lrc_src,music_images,music_images_count from company_music
+        select
+            id,
+            music_src,
+            music_name,
+            music_singer,
+            music_time,
+            music_lrc,
+            music_images,
+            music_images_count
+        from company_music
     </select>
 </mapper>
