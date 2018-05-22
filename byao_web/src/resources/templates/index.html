@@ -49,7 +49,7 @@
                                         class=" icon_adjust-horiz "></i>
                                     <h3 th:text="${info.menuName}"></h3></a>
                             </div>
-                            <p th:text="${#strings.substring(info.content,0,10)}+'...'"></p>
+                            <p th:utext="${#strings.substring(info.content,0,10)}+'...'"></p>
                         </div>
                     </div>
                 </div>
